@@ -48,7 +48,8 @@ module SatelicomPtv
         req.headers['Content-Type'] = 'application/json; charset=utf-8'
         req.body = Oj.dump(params)
       end
-      Oj.load(response.body)
+      body = Oj.load(response.body)
+      (200..300).include?(response.status) ? body : raise(BadResponse.new(body['errorMessage']))
     end
 
     def connection
