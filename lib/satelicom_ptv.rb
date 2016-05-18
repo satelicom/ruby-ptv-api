@@ -4,12 +4,14 @@ require 'hashie'
 require 'facets'
 require "satelicom_ptv/base"
 require "satelicom_ptv/version"
-#require "satelicom_ptv/constant/base"
+#Dir[File.join(File.dirname(__FILE__), 'satelicom_ptv/model/**/*.rb')].sort.each {|file| require file}
 require "satelicom_ptv/model/base"
 require "satelicom_ptv/model/plain_point"
 require "satelicom_ptv/model/point"
 require "satelicom_ptv/model/address"
 require "satelicom_ptv/model/result_address"
+require "satelicom_ptv/model/address_response"
+
 require "satelicom_ptv/x_locate/base"
 require "satelicom_ptv/x_locate/find_address"
 require "satelicom_ptv/x_locate/find_addresses"

@@ -17,11 +17,7 @@ module SatelicomPtv
         responses = post(params)
         lists = []
         responses.each do |response|
-          addresses = []
-          response['resultList'].each do |result_address|
-            addresses << SatelicomPtv::Model::ResultAddress.new(result_address)
-          end
-          lists << addresses
+          lists << SatelicomPtv::Model::AddressResponse.new(response)
         end
         lists
       end

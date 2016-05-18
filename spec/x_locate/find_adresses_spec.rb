@@ -6,11 +6,13 @@ describe SatelicomPtv::XLocate::FindAddresses do
   
   it 'call' do
     VCR.use_cassette("find_addresses") do
-      found_addresses = SatelicomPtv::XLocate::FindAddresses.new([address, address2]).call
-      expect(found_addresses.first.class).to eq(Array)
-      expect(found_addresses.last.class).to eq(Array)
-      expect(found_addresses.first.first.postCode).to eq('35129')
-      expect(found_addresses.last.first.postCode).to eq('35138')
+      function = SatelicomPtv::XLocate::FindAddresses.new([address, address2])
+      address_responses = function.call
+      expect(address_responses.first.class).to eq(SatelicomPtv::Model::AddressResponse)
+      expect(address_responses.last.class).to eq(SatelicomPtv::Model::AddressResponse)
+      result_list = address_responses.first.resultList
+      expect(result_list.first.postCode[0..1]).to eq('35')
+      expect(result_list.last.postCode[0..1]).to eq('35')
     end
   end
 end

@@ -19,7 +19,7 @@ module SatelicomPtv
       property 'coordinates'
       property 'additionalFields'
 
-      coerce_key 'coordinates', Point
+      coerce_key :coordinates, Point
     end
   end
 end
