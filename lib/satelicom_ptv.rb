@@ -5,6 +5,7 @@ require 'facets'
 require "satelicom_ptv/base"
 require "satelicom_ptv/constant"
 require "satelicom_ptv/version"
+
 #Dir[File.join(File.dirname(__FILE__), 'satelicom_ptv/model/**/*.rb')].sort.each {|file| require file}
 require "satelicom_ptv/model/base"
 require "satelicom_ptv/model/plain_point"
@@ -19,20 +20,20 @@ require "satelicom_ptv/model/combined_transport_location"
 require "satelicom_ptv/model/result_combined_transport"
 require "satelicom_ptv/model/combined_transport_response"
 
-
 require "satelicom_ptv/x_locate/base"
 require "satelicom_ptv/x_locate/find_address"
 require "satelicom_ptv/x_locate/find_addresses"
 require "satelicom_ptv/x_locate/find_location"
 require "satelicom_ptv/x_locate/find_locations"
 require "satelicom_ptv/x_locate/find_combined_transport_by_location"
+require "satelicom_ptv/x_locate/find_address_by_text"
 
 module SatelicomPtv
-   # Class method to set up configuration parameters
+  # Class method to set up configuration parameters
   #
   # @example
   #   SatelicomPtv.configure do |c|
-  #     c.app_id = "test"
+  #     c.x_locate_endpoint = "http://..."
   #   end
   #
   def self.configure(&block)
@@ -43,7 +44,7 @@ module SatelicomPtv
   # Return configuration parameters
   #
   # @example
-  #   SatelicomPtv.config.app_id
+  #   SatelicomPtv.config.x_locate_endpoint
   #
   def self.config
     @config

@@ -14,8 +14,8 @@ module SatelicomPtv
 
       def params
         { 
-          address: address,
-          country: country
+          address: text,
+          country: country,
           options: options,
           sorting: sorting,
           additionalFields: additional_fields
