@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :address, class: "SatelicomPtv::Model::Address" do
+  factory :address, class: "SatelicomPtv::Model::XLocate::Address" do
     skip_create
     country   'I'
     postCode   ''
