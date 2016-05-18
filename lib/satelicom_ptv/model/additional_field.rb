@@ -9,14 +9,9 @@ module SatelicomPtv
     # street  String    The street name of this address.
     # houseNumber String    The house number of this address.
 
-    class Address < Base
-      property 'country'
-      property 'state'
-      property 'postCode'
-      property 'city'
-      property 'city2'
-      property 'street'
-      property 'houseNumber'
+    class AdditionalField < Base
+      property 'field'
+      property 'value'
     end
   end
 end

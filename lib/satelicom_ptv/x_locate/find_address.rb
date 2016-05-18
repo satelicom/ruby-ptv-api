@@ -11,7 +11,8 @@ module SatelicomPtv
         'findAddress'
       end
 
-      def call
+      def call(options: nil, sorting: nil, additional_fields: nil)
+        extra_params(options, sorting, additional_fields)
         response = post(params)
         addresses = []
         response['resultList'].each do |result_address|
@@ -23,9 +24,9 @@ module SatelicomPtv
       def params
         { 
           addr: address,
-          options: [],
-          sorting: [],
-          additionalFields: []
+          options: options,
+          sorting: sorting,
+          additionalFields: additional_fields
         }
       end
     end

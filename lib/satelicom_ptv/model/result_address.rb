@@ -10,7 +10,16 @@ module SatelicomPtv
     # additionalFields  AdditionalField[]  Additional result fields. The fields are returned in the same order as they have been requested.
 
     class ResultAddress < Address
-      coerce_key :coordinates, Point
+      property 'adminRegion'
+      property 'appendix'
+      property 'countryCapital'
+      property 'totalScore'
+      property 'detailLevelDescription'
+      property 'classificationDescription'
+      property 'coordinates'
+      property 'additionalFields'
+
+      coerce_key 'coordinates', Point
     end
   end
 end
