@@ -11,10 +11,12 @@ require "satelicom_ptv/model/point"
 require "satelicom_ptv/model/address"
 require "satelicom_ptv/model/result_address"
 require "satelicom_ptv/model/address_response"
+require "satelicom_ptv/model/location"
 
 require "satelicom_ptv/x_locate/base"
 require "satelicom_ptv/x_locate/find_address"
 require "satelicom_ptv/x_locate/find_addresses"
+require "satelicom_ptv/x_locate/find_location"
 
 module SatelicomPtv
    # Class method to set up configuration parameters
