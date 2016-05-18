@@ -22,5 +22,18 @@ module SatelicomPtv
       :CITY_LEVEL, :STREETNUMBER, :HOUSENR_ATINPUTCOORDINATESIDE, :PROVINCE 
     ]
     SORT_ORDER = [:ASCENDING, :DESCENDING]
+
+    def self.constant_by_value( val )
+      constants.find{ |name| const_get(name)==val }
+    end
+
+    def self.validate(constant, value)
+      value = value.to_sym
+      if constant.include?(value)
+        value
+      else
+        raise WrongParameterFormat.new("#{value} is not a valid #{constant_by_value(constant)}")
+      end
+    end
   end
 end

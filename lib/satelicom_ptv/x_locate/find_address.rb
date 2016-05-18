@@ -11,12 +11,6 @@ module SatelicomPtv
         'findAddress'
       end
 
-      def call(options: nil, sorting: nil, additional_fields: nil)
-        extra_params(options, sorting, additional_fields)
-        response = post(params)
-        SatelicomPtv::Model::AddressResponse.new(response)
-      end
-
       def params
         { 
           addr: address,

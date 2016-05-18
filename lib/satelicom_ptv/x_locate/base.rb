@@ -7,6 +7,12 @@ module SatelicomPtv
         'xlocate/rs/XLocate'
       end
 
+      def call(options: nil, sorting: nil, additional_fields: nil)
+        extra_params(options, sorting, additional_fields)
+        response = post(params)
+        parse_response(response)
+      end
+
       def options=(opts)
         raise 'Not implemented'
         @search_option_base_array = opts
@@ -40,12 +46,38 @@ module SatelicomPtv
         self.additional_fields = fields if fields
       end
 
+      protected
+
+        def response_class
+          SatelicomPtv::Model::AddressResponse
+        end
+
       private 
+
+        def parse_response(response)
+          if response.is_a? Array
+            multiple_response(response)
+          else
+            single_response(response)
+          end
+        end
+
+        def single_response(response)
+          response_class.new(response)
+        end
+
+        def multiple_response(responses)
+          lists = []
+          responses.each do |response|
+            lists << response_class.new(response)
+          end
+          lists
+        end
 
         def check_additional_fields(values)
           values.each do |value|
             unless SatelicomPtv::Constant::RESULT_FIELD.include?(value.to_sym)
-              raise  WrongParameterFormat.new("Value #{value} is not a additional fields accepted value #{SatelicomPtv::Constant::RESULT_FIELD}")
+              raise WrongParameterFormat.new("Value #{value} is not a additional fields accepted value #{SatelicomPtv::Constant::RESULT_FIELD}")
             end
           end
         end 

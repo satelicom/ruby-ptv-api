@@ -1,6 +1,6 @@
 module SatelicomPtv
   module XLocate
-    class FindLocation < SatelicomPtv::XLocate::Base
+    class FindCombinedTransportByLocation < SatelicomPtv::XLocate::Base
       attr_reader :location
 
       def initialize(location)
@@ -8,17 +8,22 @@ module SatelicomPtv
       end
 
       def ptv_function
-        'findLocation'
+        'findCombinedTransportByLocation'
       end
 
       def params
         { 
           location: location,
           options: options,
-          sorting: sorting,
           additionalFields: additional_fields
         }
       end
+
+      protected
+
+        def response_class
+          SatelicomPtv::Model::CombinedTransportResponse
+        end
     end
   end
 end

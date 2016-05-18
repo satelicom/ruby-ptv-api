@@ -14,11 +14,18 @@ require "satelicom_ptv/model/result_address"
 require "satelicom_ptv/model/address_response"
 require "satelicom_ptv/model/location"
 require "satelicom_ptv/model/sort_option"
+require "satelicom_ptv/model/additional_field"
+require "satelicom_ptv/model/combined_transport_location"
+require "satelicom_ptv/model/result_combined_transport"
+require "satelicom_ptv/model/combined_transport_response"
+
 
 require "satelicom_ptv/x_locate/base"
 require "satelicom_ptv/x_locate/find_address"
 require "satelicom_ptv/x_locate/find_addresses"
 require "satelicom_ptv/x_locate/find_location"
+require "satelicom_ptv/x_locate/find_locations"
+require "satelicom_ptv/x_locate/find_combined_transport_by_location"
 
 module SatelicomPtv
    # Class method to set up configuration parameters

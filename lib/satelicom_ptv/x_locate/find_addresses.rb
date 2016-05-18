@@ -12,16 +12,6 @@ module SatelicomPtv
         'findAddresses'
       end
 
-      def call(options: nil, sorting: nil, additional_fields: nil)
-        extra_params(options, sorting, additional_fields)
-        responses = post(params)
-        lists = []
-        responses.each do |response|
-          lists << SatelicomPtv::Model::AddressResponse.new(response)
-        end
-        lists
-      end
-
       def params
         { 
           addrs: addresses,

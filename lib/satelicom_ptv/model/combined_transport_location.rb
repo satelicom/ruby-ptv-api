@@ -1,7 +1,9 @@
 module SatelicomPtv
   module Model
-    class Location < Base
+    class CombinedTransportLocation < Base
       property 'coordinate'
+      property 'country'
+      property 'name'
       
       coerce_key :coordinate, Point
     end
