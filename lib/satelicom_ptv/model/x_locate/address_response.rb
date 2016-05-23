@@ -1,7 +1,7 @@
 module SatelicomPtv
   module Model
     module XLocate
-      class AddressResponse < Base
+      class AddressResponse < SatelicomPtv::Model::Base
         property 'errorCode'
         property 'errorDescription'
         property 'resultList'

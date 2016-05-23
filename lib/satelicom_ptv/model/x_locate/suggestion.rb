@@ -1,7 +1,7 @@
 module SatelicomPtv
   module Model 
     module XLocate
-      class Suggestion < Base
+      class Suggestion < SatelicomPtv::Model::Base
         property 'text'
         property 'additionalFields'
         

@@ -1,7 +1,7 @@
 module SatelicomPtv
   module Model 
     module XLocate
-      class CombinedTransportLocation < Base
+      class CombinedTransportLocation < SatelicomPtv::Model::Base
         property 'coordinate'
         property 'country'
         property 'name'

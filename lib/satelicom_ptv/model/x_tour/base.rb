@@ -1,6 +1,6 @@
 module SatelicomPtv
   module Model
-    module XLocate
+    module XTour
       class Base < Hashie::Dash
         #include Hashie::Extensions::MergeInitializer
         include Hashie::Extensions::MethodAccess

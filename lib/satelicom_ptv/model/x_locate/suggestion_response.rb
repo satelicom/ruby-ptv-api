@@ -1,7 +1,7 @@
 module SatelicomPtv
   module Model 
     module XLocate
-      class SuggestionResponse < Base
+      class SuggestionResponse < SatelicomPtv::Model::Base
         property 'suggestionList'
         property 'errorcode'
         property 'errorDescription'

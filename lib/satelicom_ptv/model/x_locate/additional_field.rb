@@ -1,7 +1,7 @@
 module SatelicomPtv
   module Model
     module XLocate
-      class AdditionalField < Base
+      class AdditionalField < SatelicomPtv::Model::Base
         include Hashie::Extensions::Dash::PropertyTranslation
 
         property 'field', transform_with: ->(value) do 

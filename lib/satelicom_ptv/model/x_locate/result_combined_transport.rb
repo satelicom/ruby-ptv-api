@@ -11,7 +11,7 @@ module SatelicomPtv
       # start CombinedTransportLocation The start of the combined transport.
       # destination CombinedTransportLocation The destination of the combined transport.
       # combinedTransportFields AdditionalField[] Additional combined transport result fields. The fields are returned in the same order as they have been requested.
-      class ResultCombinedTransport < Base
+      class ResultCombinedTransport < SatelicomPtv::Model::Base
         property 'id'
         property 'name'
         property 'duration'

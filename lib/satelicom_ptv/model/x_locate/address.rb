@@ -10,7 +10,7 @@ module SatelicomPtv
       # street  String    The street name of this address.
       # houseNumber String    The house number of this address.
 
-      class Address < Base
+      class Address < SatelicomPtv::Model::Base
         property 'country'
         property 'state'
         property 'postCode'

@@ -1,7 +1,7 @@
 module SatelicomPtv
   module Model
     module XLocate
-      class CombinedTransportResponse < Base
+      class CombinedTransportResponse < SatelicomPtv::Model::Base
         property 'errorCode'
         property 'errorDescription'
         property 'resultList'
