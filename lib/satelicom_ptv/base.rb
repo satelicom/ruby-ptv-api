@@ -1,5 +1,6 @@
 module SatelicomPtv
   class Base
+    attr_accessor :profile, :coord_format
 
     def endpoint
       SatelicomPtv.config.send("#{parent_module_name.downcase}_endpoint")
@@ -59,7 +60,7 @@ module SatelicomPtv
         faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP
       end
     end
-
+    
     def default_params
       {
         callerContext: {
@@ -70,7 +71,7 @@ module SatelicomPtv
             },
             {
               key: 'CoordFormat',
-              value: 'PTV_MERCATOR'
+              value: coord_format || :PTV_GEODECIMAL
             }
           ]
         }

@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe SatelicomPtv::Operation::XLocate::FindLocations do
   let(:location){ create(:location) }
-  let(:location2){ create(:location,  coordinate: create(:point, point: create(:plain_point, x: 681426.2394831667, y: 6372253.889732955)) ) }
+  let(:location2){ create(:location,  coordinate: create(:point, point: create(:plain_point, x: 612967, y: 4960958)) ) }
   
   it 'call' do
     VCR.use_cassette("find_locations") do
