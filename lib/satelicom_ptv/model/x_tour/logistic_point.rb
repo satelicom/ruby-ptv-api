@@ -2,7 +2,7 @@ module SatelicomPtv
   module Model 
     module XTour
       class LogisticPoint < SatelicomPtv::Model::Base
-        property 'id'
+        property 'id', required: true
         property 'description'
         property 'location'
         property 'openingIntervals'

@@ -1,6 +1,6 @@
 module SatelicomPtv
   module Model 
-    module XLocate
+    module XTour
       class AbstractTransportOrder < SatelicomPtv::Model::Base
         property 'id', required: true
         property 'priority'

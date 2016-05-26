@@ -5,7 +5,7 @@ module SatelicomPtv
       include Hashie::Extensions::MethodAccess
       include Hashie::Extensions::Dash::Coercion
     
-      property '$type'
+      property '$type', default: ->(obj) { obj.class.name.split(':').last }
     end
   end
 end

@@ -5,7 +5,10 @@ FactoryGirl.define do
     location { 
       SatelicomPtv::Model::Point.new(
         {
-          'point' => SatelicomPtv::Model::PlainPoint.new('x' => 12318994, 'y' => 45437802)
+          'point' => SatelicomPtv::Model::PlainPoint.new(
+            'x' => 12318994, 
+            'y' => 45437802
+          )
         }
       ) 
     }

@@ -1,8 +1,8 @@
 module SatelicomPtv
   module Model
     class PlainPoint < Base
-      property 'x'
-      property 'y'
+      property 'x' # longitude
+      property 'y' # latitude
       property 'z'
     end
   end

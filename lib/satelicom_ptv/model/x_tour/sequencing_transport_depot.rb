@@ -1,7 +1,7 @@
 module SatelicomPtv
   module Model 
-    module XLocate
-      class SequencingTransportDepot < AbstractTransportOrder
+    module XTour
+      class SequencingTransportDepot < SequencingTransportOrder
         property 'transportPoint'
         property 'pickupQuantities'
         property 'deliveryQuantities'

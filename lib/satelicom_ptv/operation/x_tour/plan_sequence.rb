@@ -15,11 +15,11 @@ module SatelicomPtv
         end
 
         def sequencing_params
-          SequencingParams.new({
-            'coDriverTransportPointsInSeparateTours': false,
+          SatelicomPtv::Model::XTour::SequencingParams.new({
+            'coDriverTransportPointsInSeparateTours' => false,
             'distanceMatrixCalculation' => 
               [
-                DistanceMatrixByRoad.new({
+                SatelicomPtv::Model::XTour::DistanceMatrixByRoad.new({
                   'dimaId' => 1,
                   'deleteBeforeUsage' => true,
                   'deleteAfterUsage' => true

@@ -14,7 +14,7 @@ module SatelicomPtv
 
         coerce_key :restrictions, Restrictions
         coerce_key :loadingFunctions,  Array[LoadingFunction]
-        coerce_key :distanceMatrixCalculation, DistanceMatrixCalculation
+        coerce_key :distanceMatrixCalculation, Array[DistanceMatrixCalculation]
         coerce_key :regulations, Array[DistanceMatrixCalculation]
         coerce_key :productIncompatibilities, Array[ProductIncompatibility]
       end
