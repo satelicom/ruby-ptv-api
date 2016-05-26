@@ -4,7 +4,7 @@ module SatelicomPtv
       class LogisticPoint < SatelicomPtv::Model::Base
         property 'id', required: true
         property 'description'
-        property 'location'
+        property 'location', required: true
         property 'openingIntervals'
         property 'siteId'
         property 'extraSitePeriod'

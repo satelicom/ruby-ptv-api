@@ -12,7 +12,7 @@ module SatelicomPtv
         property 'isPreloaded'
         property 'capacities'
         property 'costs'
-        property 'dimaId', required: true #depot id
+        property 'dimaId'#, required: true #depot id
         property 'ignoreTransportPointServicePeriod'
         property 'coDriverStatus', transform_with: ->(value) do 
           SatelicomPtv::Constant.validate(SatelicomPtv::Constant::CO_DRIVER_STATUS, value)
