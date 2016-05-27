@@ -14,26 +14,6 @@ module SatelicomPtv
           'planBasicTours'
         end
 
-        # "planningParams": {
-        #   "$type": "StandardParams",
-        #   "coDriverTransportPointsInSeparateTours": false,
-        #   "distanceMatrixCalculation": [
-        #     {
-        #       "$type": "DistanceMatrixByRoad",
-        #       "dimaId": 1,
-        #       "deleteBeforeUsage": true,
-        #       "deleteAfterUsage": true,
-        #       "profileName": "dimaCar"
-        #     },
-        #     {
-        #       "$type": "DistanceMatrixByRoad",
-        #       "dimaId": 2,
-        #       "deleteBeforeUsage": true,
-        #       "deleteAfterUsage": true,
-        #       "profileName": "dimaTruck"
-        #     }
-        #   ]
-        # },
         def planning_params
           SatelicomPtv::Model::XTour::StandardParams.new({
             "coDriverTransportPointsInSeparateTours" => false,

@@ -55,26 +55,6 @@ module SatelicomPtv
 
         private 
 
-          def parse_response(response)
-            if response.is_a? Array
-              multiple_response(response)
-            else
-              single_response(response)
-            end
-          end
-
-          def single_response(response)
-            response_class.new(response)
-          end
-
-          def multiple_response(responses)
-            lists = []
-            responses.each do |response|
-              lists << response_class.new(response)
-            end
-            lists
-          end
-
           def check_additional_fields(values)
             values.each do |value|
               unless SatelicomPtv::Constant::RESULT_FIELD.include?(value.to_sym)
