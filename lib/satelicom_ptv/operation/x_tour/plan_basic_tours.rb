@@ -2,7 +2,7 @@ module SatelicomPtv
   module Operation
     module XTour
       class PlanBasicTours < Base
-        attr_reader :transport_orders, :depots, :vehicle
+        attr_reader :transport_orders, :depots, :fleet
 
         def initialize(transport_orders:, depots:, fleet:)
           @transport_orders = transport_orders
@@ -11,22 +11,41 @@ module SatelicomPtv
         end
 
         def ptv_function
-          'plantBasicTours'
+          'planBasicTours'
         end
 
-        # def sequencing_params
-        #   SatelicomPtv::Model::XTour::SequencingParams.new({
-        #     'coDriverTransportPointsInSeparateTours' => false,
-        #     'distanceMatrixCalculation' => 
-        #       [
-        #         SatelicomPtv::Model::XTour::DistanceMatrixByRoad.new({
-        #           'dimaId' => 1,
-        #           'deleteBeforeUsage' => true,
-        #           'deleteAfterUsage' => true
-        #         })                
-        #       ]
-        #   })
-        # end
+        # "planningParams": {
+        #   "$type": "StandardParams",
+        #   "coDriverTransportPointsInSeparateTours": false,
+        #   "distanceMatrixCalculation": [
+        #     {
+        #       "$type": "DistanceMatrixByRoad",
+        #       "dimaId": 1,
+        #       "deleteBeforeUsage": true,
+        #       "deleteAfterUsage": true,
+        #       "profileName": "dimaCar"
+        #     },
+        #     {
+        #       "$type": "DistanceMatrixByRoad",
+        #       "dimaId": 2,
+        #       "deleteBeforeUsage": true,
+        #       "deleteAfterUsage": true,
+        #       "profileName": "dimaTruck"
+        #     }
+        #   ]
+        # },
+        def planning_params
+          SatelicomPtv::Model::XTour::StandardParams.new({
+            "coDriverTransportPointsInSeparateTours" => false,
+            'distanceMatrixCalculation' => [
+              SatelicomPtv::Model::XTour::DistanceMatrixByRoad.new({
+                'dimaId' => 1,
+                'deleteBeforeUsage' => true,
+                'deleteAfterUsage' => true
+              })                
+            ]
+          })
+        end
 
         def params
           { 
@@ -37,6 +56,12 @@ module SatelicomPtv
             inputPlan: nil
           }
         end
+
+        protected
+
+          def response_class
+            SatelicomPtv::Model::XTour::Plan
+          end
       end
     end
   end

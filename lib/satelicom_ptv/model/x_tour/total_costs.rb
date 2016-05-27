@@ -1,7 +1,7 @@
 module SatelicomPtv
   module Model 
     module XTour
-      class TotalCosts < SatelicomPtv::Model::Base
+      class TotalCosts < AbstractCosts
         property 'costsPerHour'
         property 'totalCosts'
       end

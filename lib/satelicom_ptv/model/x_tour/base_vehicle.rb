@@ -1,7 +1,7 @@
 module SatelicomPtv
   module Model 
     module XTour
-      class BaseVehicle < SatelicomPtv::Model::Base
+      class BaseVehicle < AbstractVehicle 
         property 'drivingPeriodFactor'
         property 'servicePeriodFactor'
         property 'transportPointUploadingFunctionId'

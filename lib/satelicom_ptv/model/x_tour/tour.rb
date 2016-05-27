@@ -1,7 +1,7 @@
 module SatelicomPtv
   module Model 
     module XTour
-      class Tour < SatelicomPtv::Model::Base
+      class Tour < AbstractTour
         property 'id'
         property 'description'
         property 'trailerId'

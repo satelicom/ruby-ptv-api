@@ -10,7 +10,7 @@ module SatelicomPtv
         property 'endTime'
         property 'periodFromStartLocation'
         property 'distanceFromStartLocation'
-        property 'periodToEndLocation '
+        property 'periodToEndLocation'
         property 'distanceToEndLocation'
         
         coerce_key :tourEvents, Array[TourEvent]

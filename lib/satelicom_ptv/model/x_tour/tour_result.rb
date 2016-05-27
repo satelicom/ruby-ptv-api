@@ -1,7 +1,7 @@
 module SatelicomPtv
   module Model 
     module XTour
-      class TourResult < SatelicomPtv::Model::Base
+      class TourResult < AbstractTourResult
         property 'vehicleRequirements'
         property 'vehicleExclusions'
         property 'trainDescription'

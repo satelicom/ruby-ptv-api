@@ -1,7 +1,7 @@
  module SatelicomPtv
   module Model 
     module XTour
-      class SequencingVehicle < AbstractVehicle
+      class SequencingVehicle < BaseVehicle
       end
     end
   end

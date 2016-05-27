@@ -6,7 +6,7 @@ module SatelicomPtv
         property 'tours'
         property 'result'
         
-        coerce_key :chains, Array[Tour]
+        coerce_key :tours, Array[Tour]
         coerce_key :result, ChainResult
       end
     end

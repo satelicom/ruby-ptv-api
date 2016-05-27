@@ -1,7 +1,7 @@
 module SatelicomPtv
   module Model 
     module XTour
-      class AbstractVehicle < BaseVehicle 
+      class AbstractVehicle < SatelicomPtv::Model::Base
         property 'depotIdStart', required: true
         property 'depotIdEnd'  , required: true
         property 'operatingIntervals'
