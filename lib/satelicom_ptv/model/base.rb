@@ -1,10 +1,11 @@
 module SatelicomPtv
   module Model
     class Base < Hashie::Dash
-      #include Hashie::Extensions::MergeInitializer
+      # Do not change include order
+      include Hashie::Extensions::Dash::PropertyTranslation
       include Hashie::Extensions::MethodAccess
-      include Hashie::Extensions::Dash::Coercion
-    
+      include Hashie::Extensions::Coercion
+      
       property '$type', default: ->(obj) { obj.class.name.split(':').last }
     end
   end
