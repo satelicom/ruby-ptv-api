@@ -8,10 +8,11 @@ module SatelicomPtv
           @transport_orders = transport_orders
           @depots = depots
           @vehicle = vehicle
+          @dimaId = 1
         end
 
         def ptv_function
-          'plantSequence'
+          'planSequence'
         end
 
         def sequencing_params
@@ -37,6 +38,14 @@ module SatelicomPtv
             inputPlan: nil
           }
         end
+
+        protected
+
+          def response_class
+            SatelicomPtv::Model::XTour::SequencingPlan
+          end
+
+        
       end
     end
   end

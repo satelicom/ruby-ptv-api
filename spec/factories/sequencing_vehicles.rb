@@ -1,11 +1,10 @@
 FactoryGirl.define do
-  factory :sequencing_vehicle, class: "SatelicomPtv::Model::XTour::SequencingVehicle" do |v|
-    skip_create
-    v['depotIdStart'] 17
-    v.depotIdEnd 17
-    v.isPreloaded false
-    v.ignoreTransportPointServicePeriod false
-    v.coDriverStatus "NEVER"
-    v.toursMustFitIntoSingleOperatingInterval false
+  factory :sequencing_vehicle, class: "SatelicomPtv::Model::XTour::SequencingVehicle" do 
+    depotIdStart 17
+    depotIdEnd 17
+    isPreloaded false
+    ignoreTransportPointServicePeriod false
+    coDriverStatus "NEVER"
+    toursMustFitIntoSingleOperatingInterval false
   end
 end

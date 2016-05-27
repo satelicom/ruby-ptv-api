@@ -1,7 +1,7 @@
 module SatelicomPtv
   module Model 
     module XTour
-      class SequencingTour < SatelicomPtv::Model::Base
+      class SequencingTour < AbstractTour
         property 'result'
         property 'tourPoints'
 

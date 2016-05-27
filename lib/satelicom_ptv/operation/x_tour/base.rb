@@ -50,7 +50,7 @@ module SatelicomPtv
         protected
 
           def response_class
-            SatelicomPtv::Model::XLocate::AddressResponse
+            raise 'not implemented'
           end
 
         private 

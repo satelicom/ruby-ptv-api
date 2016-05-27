@@ -44,7 +44,6 @@ module SatelicomPtv
 
     def post(params)
       params.merge!(default_params)
-      p params.to_json
       response = connection.post do |req|
         req.url "#{ptv_path}/#{ptv_function}"
         req.headers['Content-Type'] = 'application/json; charset=utf-8'

@@ -7,13 +7,13 @@ FactoryGirl.define do
 
   factory :leanbit_plain_point, class: "SatelicomPtv::Model::PlainPoint" do
     skip_create
-    x 11918931
-    y 45412991
+    x 1191893
+    y 4541299
   end
 
   factory :satelicom_plain_point, class: "SatelicomPtv::Model::PlainPoint" do
     skip_create
-    x 11575380
-    y 45549488
+    x 1157538
+    y 4554948
   end
 end
