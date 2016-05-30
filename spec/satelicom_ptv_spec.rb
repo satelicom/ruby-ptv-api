@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe SatelicomPtv do
   
-  it 'does something useful' do
+  it 'check require order' do
     
   end
 end

@@ -16,4 +16,10 @@ FactoryGirl.define do
     x 1157538
     y 4554948
   end
+
+  factory :venice_plain_point, class: "SatelicomPtv::Model::PlainPoint" do
+    skip_create
+    x 1231898
+    y 4543764
+  end
 end

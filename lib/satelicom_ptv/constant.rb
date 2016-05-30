@@ -89,6 +89,8 @@ module SatelicomPtv
 
     MANOEUVRE_GROUP_TYPE = [:MG_TYPE1, :MG_TYPE2]
 
+    EXPANSION_TYPE = [:EXP_TIME, :EXP_DIST]
+
     def self.constant_by_value( val )
       constants.find{ |name| const_get(name)==val }
     end

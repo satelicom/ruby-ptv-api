@@ -5,11 +5,10 @@ module SatelicomPtv
         attr_reader :search_option_base_array, :sort_option_array, :result_field_array
 
         def ptv_path
-          'xtour/rs/XRoute'
+          'xroute/rs/XRoute'
         end
 
-        def call(options: nil, sorting: nil, additional_fields: nil)
-          extra_params(options, sorting, additional_fields)
+        def call #(options: nil, sorting: nil, additional_fields: nil)
           response = post(params)
           parse_response(response)
         end

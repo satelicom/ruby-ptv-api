@@ -16,7 +16,7 @@ module SatelicomPtv
         property 'viaType'
         property 'combinedTransportID'
 
-        coerce_key :coords        , Point
+        coerce_key :coords        , Array[Point]
         coerce_key :nodeID        , UniqueGeoID
         coerce_key :segmentID     , Array[UniqueGeoID]
         coerce_key :routingOptions, Array[RoutingOption]

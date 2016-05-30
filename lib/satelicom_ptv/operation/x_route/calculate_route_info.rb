@@ -1,33 +1,31 @@
 module SatelicomPtv
   module Operation
     module XRoute
-      class CalcutateRoute < Base
-        attr_reader :waypoints, :options, :exceptionPaths, :details
+      class CalcutateRouteInfo < Base
+        attr_reader :waypoints, :options, :exceptionPaths
 
-        def initialize(waypoints:, options:, exceptionPaths: , details:)
+        def initialize(waypoints:, options: [], exceptionPaths: [])
           @waypoints = waypoints
           @options = options
           @exceptionPaths = exceptionPaths
-          @details = details
         end
 
         def ptv_function
-          'calculateRoute'
+          'calculateRouteInfo'
         end
 
         def params
           { 
             waypoints: waypoints,
             options: options,
-            exceptionPaths: exceptionPaths,
-            details: details
+            exceptionPaths: exceptionPaths
           }
         end
 
         protected
 
           def response_class
-            SatelicomPtv::Model::XRoute::Route
+            SatelicomPtv::Model::XRoute::RouteInfo
           end
       end
     end

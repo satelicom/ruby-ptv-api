@@ -21,6 +21,7 @@ module SatelicomPtv
         property 'urbanManoeuvres'
         property 'startDetail'
         property 'destDetail'
+        property 'manoeuvreGroups'
         property 'manoeuvreGroupRatio'
         property 'tollManoeuvres'
         property 'boundingRectanglesC'

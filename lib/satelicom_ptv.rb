@@ -123,6 +123,9 @@ require "satelicom_ptv/model/x_route/route_info.rb"
 require "satelicom_ptv/model/x_route/route_list_segment.rb"
 require "satelicom_ptv/model/x_route/route_manoeuvre.rb"
 require "satelicom_ptv/model/x_route/route.rb"
+require "satelicom_ptv/model/x_route/expansion_description.rb"
+require "satelicom_ptv/model/x_route/reach_info.rb"
+require "satelicom_ptv/model/x_route/reach.rb"
 
 require "satelicom_ptv/operation/x_locate/base"
 require "satelicom_ptv/operation/x_locate/find_address"
@@ -136,6 +139,11 @@ require "satelicom_ptv/operation/x_locate/find_suggestion"
 require "satelicom_ptv/operation/x_tour/base"
 require "satelicom_ptv/operation/x_tour/plan_sequence"
 require "satelicom_ptv/operation/x_tour/plan_basic_tours"
+
+require "satelicom_ptv/operation/x_route/base"
+require "satelicom_ptv/operation/x_route/calculate_route"
+require "satelicom_ptv/operation/x_route/calculate_route_info"
+require "satelicom_ptv/operation/x_route/calculate_reachable_objects"
 
 module SatelicomPtv
   # Class method to set up configuration parameters
