@@ -1,6 +1,5 @@
 require 'oj'
 require 'hashie'
-require 'facets'
 
 require "satelicom_ptv/base"
 require "satelicom_ptv/constant"
