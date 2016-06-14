@@ -51,6 +51,7 @@ module SatelicomPtv
         req.body = Oj.dump(params)
       end
       body = Oj.load(response.body)
+      #p body
       (200..300).include?(response.status) ? body : raise(BadResponse.new(response.body))
     end
 

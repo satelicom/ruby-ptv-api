@@ -12,7 +12,7 @@ module SatelicomPtv
         property 'trailerLoadingForbidden'
 
         coerce_key :minLoadingArea, LoadingArea
-        coerce_key :minLoadingArea, LoadingArea
+        coerce_key :maxLoadingArea, LoadingArea
       end
     end
   end

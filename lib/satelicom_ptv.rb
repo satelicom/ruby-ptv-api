@@ -1,5 +1,6 @@
 require 'oj'
 require 'hashie'
+require 'faraday'
 
 require "satelicom_ptv/base"
 require "satelicom_ptv/constant"
@@ -144,7 +145,11 @@ require "satelicom_ptv/operation/x_route/calculate_route"
 require "satelicom_ptv/operation/x_route/calculate_route_info"
 require "satelicom_ptv/operation/x_route/calculate_reachable_objects"
 
+require "satelicom_ptv/id_manager"
+require "satelicom_ptv/x_tour"
+
 module SatelicomPtv
+  
   # Class method to set up configuration parameters
   #
   # @example
@@ -188,4 +193,7 @@ module SatelicomPtv
   #  
   class WrongParameterFormat < Exception; end
 
+  def self.cast_coordinate(coord)
+    coord.to_i.to_s.size != 7 ? (coord * 100000).to_i : coord
+  end
 end
