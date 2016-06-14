@@ -40,23 +40,6 @@ module SatelicomPtv
           )
         ] if garage[:interval]
 
-    #     private void initVehicle() {
-    #     vehicle.setDepotIdStart(sede.getId().intValue() + 200);
-    #     vehicle.setDepotIdEnd(sede.getId().intValue() + 200);
-    #     vehicle.setIsPreloaded(false);
-    #     vehicle.setDimaId(distanceMatrixByRoad.getDimaId());
-    #     vehicle.setIsPreloaded(false);
-    #     vehicle.setIgnoreTransportPointServicePeriod(false);
-    #     vehicle.setCoDriverStatus(CoDriverStatus.NEVER);
-
-    #     Interval interval = new Interval(orarioInizio - 900, orarioFine + 900);
-    #     Interval[] intervals = new Interval[1]; // Singolo giro singolo intervallo  
-    #     intervals[0] = interval;
-    #     vehicle.setOperatingIntervals(intervals);
-    #     vehicle.setToursMustFitIntoSingleOperatingInterval(true);
-    # }
-
-        
         points.each do |point|
           raise "each point has to include the keys #{required_keys}" unless (required_keys - point.keys).empty?
           sequencing_transport_depots << create_sequencing_transport_depot(
@@ -72,13 +55,14 @@ module SatelicomPtv
           depots: [depot], 
           vehicle: vehicle
         )
-        tour = function.call.tour
-        sequence = tour.tourPoints.map{|tp| id_manager.uuid(tp.id.to_i)}
-        hash = Hash[points.concat([garage]).map{|e| [e[:uuid], e]}]
-        p "HASH----------"
-        p hash
-        p sequence
-        sequence.map{|e| hash[e]}
+        response = function.call
+        sequence = response.tour.tourPoints ? response.tour.tourPoints.map{|tp| id_manager.uuid(tp.id.to_i)} : []
+        unmanaged_list = response.result.unscheduledOrderIds ? response.result.unscheduledOrderIds.map{|id| id_manager.uuid(id)} : []
+        hash = Hash[[garage].concat(points).map{|e| [e[:uuid], e]}]
+        {
+          sequence: sequence.map{|e| hash[e]},
+          unmanaged: unmanaged_list.map{|e| hash[e]},
+        }
       end
 
       def create_sequencing_transport_depot(uuid:, id_manager:, latitude:, longitude:, interval:)

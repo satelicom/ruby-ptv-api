@@ -168,6 +168,9 @@ module SatelicomPtv
   #   SatelicomPtv.config.x_locate_endpoint
   #
   def self.config
+    if @config.nil? or @config.instance_variables.count != 3
+      raise 'SatelicomPtv gem uncompleted config'
+    end
     @config
   end
 

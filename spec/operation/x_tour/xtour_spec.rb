@@ -52,7 +52,20 @@ describe SatelicomPtv::XTour do
       interval: (from..to)
     }
 
-    p SatelicomPtv::XTour.plan_sequence(points, garage).map{|p| p[:name]}
+    VCR.use_cassette("xtour_wrapper") do
+      response = SatelicomPtv::XTour.plan_sequence(points, garage)
+      expect(response[:sequence].map{|p| p[:name]}).to eq(["Leanbit", "Satelicom", "Arena di Verona", "Modena", "Bologna", "Ferrara", "Leanbit"])
+      expect(response[:unmanaged]).to eq([])
+
+      fake_garage = {
+        uuid: "100", 
+        longitude: 45.918910, # not real position
+        latitude: 45.412983, 
+        interval: (from..to)
+      }
+      response2 = SatelicomPtv::XTour.plan_sequence(points, fake_garage)
+      expect(response2[:unmanaged].size).to eq(points.size)
+    end
   end
 end
 
