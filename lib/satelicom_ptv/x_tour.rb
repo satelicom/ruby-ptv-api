@@ -62,6 +62,7 @@ module SatelicomPtv
         {
           sequence: sequence.map{|e| hash[e]},
           unmanaged: unmanaged_list.map{|e| hash[e]},
+          raw_response: response
         }
       end
 

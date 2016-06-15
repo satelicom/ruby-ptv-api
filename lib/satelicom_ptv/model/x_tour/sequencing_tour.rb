@@ -5,7 +5,7 @@ module SatelicomPtv
         property 'result'
         property 'tourPoints'
 
-        coerce_key :capacities, SequencingTourResult
+        coerce_key :result, SequencingTourResult
         coerce_key :tourPoints, Array[SequencingTourPoint]
       end
     end
