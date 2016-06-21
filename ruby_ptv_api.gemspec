@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["info@leanbit.it"]
 
   spec.summary       = "Unofficial PVT ruby client"
-  spec.homepage      = "http://repo.dev.satelicom.com/leanbit/ruby_ptv_api"
+  spec.homepage      = "https://github.com/satelicom/ruby-ptv-api"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
   # delete this section to allow pushing this gem to any host.
