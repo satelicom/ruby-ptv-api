@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe SatelicomPtv::Operation::XRoute::CalcutateRoute do
+describe RubyPtvApi::Operation::XRoute::CalcutateRoute do
   let(:details) do 
-    SatelicomPtv::Model::XRoute::ResultListOptions.new(
+    RubyPtvApi::Model::XRoute::ResultListOptions.new(
       "binaryPathDesc" => false,
       "boundingRectanglesC" =>  5,
       "boundingRectanglesOffset" =>  300,
@@ -26,7 +26,7 @@ describe SatelicomPtv::Operation::XRoute::CalcutateRoute do
   let(:waypoints){ XTourTest.create_waypoint_descs(plain_points) }
   it 'call' do
     VCR.use_cassette("calculate_route") do
-      function = SatelicomPtv::Operation::XRoute::CalcutateRoute.new(
+      function = RubyPtvApi::Operation::XRoute::CalcutateRoute.new(
         waypoints: waypoints, 
         options: [], 
         exceptionPaths: [], 

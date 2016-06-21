@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe SatelicomPtv::Operation::XRoute::CalcutateReachableObjects do
+describe RubyPtvApi::Operation::XRoute::CalcutateReachableObjects do
   let(:details) do 
-    SatelicomPtv::Model::XRoute::ResultListOptions.new(
+    RubyPtvApi::Model::XRoute::ResultListOptions.new(
       "binaryPathDesc" => true,
       "boundingRectanglesC" =>  5,
       "boundingRectanglesOffset" =>  300,
@@ -26,7 +26,7 @@ describe SatelicomPtv::Operation::XRoute::CalcutateReachableObjects do
   let(:waypoints){ XTourTest.create_waypoint_descs(plain_points) }
   let(:leanbit_waypoint_desc){ XTourTest.create_waypoint_desc(create(:leanbit_plain_point)) }
   let(:expansionDesc) do
-    SatelicomPtv::Model::XRoute::ExpansionDescription.new({
+    RubyPtvApi::Model::XRoute::ExpansionDescription.new({
       "expansionType" => "EXP_TIME",
       "horizons" => [
         3000
@@ -36,7 +36,7 @@ describe SatelicomPtv::Operation::XRoute::CalcutateReachableObjects do
 
   it 'call' do
     VCR.use_cassette("calculate_reachable_objects") do
-      route_function = SatelicomPtv::Operation::XRoute::CalcutateRoute.new(
+      route_function = RubyPtvApi::Operation::XRoute::CalcutateRoute.new(
         waypoints: waypoints, 
         options: [], 
         exceptionPaths: [], 
@@ -45,7 +45,7 @@ describe SatelicomPtv::Operation::XRoute::CalcutateReachableObjects do
       route = route_function.call
       expect(route.info.distance).to be_between(66000, 68000)
       
-      function = SatelicomPtv::Operation::XRoute::CalcutateReachableObjects.new(
+      function = RubyPtvApi::Operation::XRoute::CalcutateReachableObjects.new(
         binaryPathDesc: route.binaryPathDesc, 
         locations: [leanbit_waypoint_desc],
         expansionDesc: expansionDesc

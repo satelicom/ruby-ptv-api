@@ -1,0 +1,8 @@
+[Dolphin]
+GroupedSorting=true
+PreviewsShown=true
+SortRole=type
+Timestamp=2016,6,21,11,47,47
+Version=3
+ViewMode=2
+VisibleRoles=Compact_text,Compact_size,Compact_date

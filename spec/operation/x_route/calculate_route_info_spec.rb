@@ -1,11 +1,11 @@
 require 'spec_helper'
 
-describe SatelicomPtv::Operation::XRoute::CalcutateRouteInfo do
+describe RubyPtvApi::Operation::XRoute::CalcutateRouteInfo do
   let(:plain_points) { [create(:leanbit_plain_point), create(:satelicom_plain_point)] }
   let(:waypoints){ XTourTest.create_waypoint_descs(plain_points) }
   it 'call' do
     VCR.use_cassette("calculate_route_info") do
-      function = SatelicomPtv::Operation::XRoute::CalcutateRouteInfo.new(
+      function = RubyPtvApi::Operation::XRoute::CalcutateRouteInfo.new(
         waypoints: waypoints,
       )
       route_info = function.call

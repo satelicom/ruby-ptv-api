@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :location, class: "SatelicomPtv::Model::XLocate::Location" do
+  factory :location, class: "RubyPtvApi::Model::XLocate::Location" do
     skip_create
     coordinate { create(:point) }
   end

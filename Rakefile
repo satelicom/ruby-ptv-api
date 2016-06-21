@@ -7,5 +7,5 @@ task :default => :spec
 
 desc "Open an irb session preloaded with this library"
 task :console do
-  sh "irb -rubygems -I lib -r satelicom_ptv.rb -r ./console_initializer.rb "
+  sh "irb -rubygems -I lib -r ruby_ptv_api.rb -r ./console_initializer.rb "
 end

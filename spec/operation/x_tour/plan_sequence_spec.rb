@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe SatelicomPtv::Operation::XTour::PlanSequence do
-  let(:depot) { SatelicomPtv::Model::XTour::Depot.new('id' => 1, 'location' => create(:point)) }
+describe RubyPtvApi::Operation::XTour::PlanSequence do
+  let(:depot) { RubyPtvApi::Model::XTour::Depot.new('id' => 1, 'location' => create(:point)) }
   let(:vehicle) do 
-    SatelicomPtv::Model::XTour::SequencingVehicle.new( 
+    RubyPtvApi::Model::XTour::SequencingVehicle.new(
       'dimaId' => 1, 
       'depotIdStart' => depot.id,
       'depotIdEnd' => depot.id
@@ -13,7 +13,7 @@ describe SatelicomPtv::Operation::XTour::PlanSequence do
   let(:transport_orders){ XTourTest.create_sequencing_transport_depots(plain_points) }
   it 'call' do
     VCR.use_cassette("plan_sequence") do
-      function = SatelicomPtv::Operation::XTour::PlanSequence.new(
+      function = RubyPtvApi::Operation::XTour::PlanSequence.new(
         transport_orders: transport_orders, 
         depots: [depot], 
         vehicle: vehicle

@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in satelicom_ptv.gemspec
+# Specify your gem's dependencies in ruby_ptv_api.gemspec
 gemspec

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe SatelicomPtv::XTour do
+describe RubyPtvApi::XTour do
   it 'plan_sequence wrapper' do 
     from = Time.utc(1970, 1, 1, 1)
     to =   Time.utc(1970, 1, 1, 10)
@@ -53,7 +53,7 @@ describe SatelicomPtv::XTour do
     })
 
     VCR.use_cassette("xtour_wrapper") do
-      response = SatelicomPtv::XTour.plan_sequence(points, garage)
+      response = RubyPtvApi::XTour.plan_sequence(points, garage)
       expect(response[:sequence].map{|p| p[:name]}).to eq(["Satelicom", "Arena di Verona", "Modena", "Bologna", "Ferrara"])
       expect(response[:unmanaged]).to eq([])
 
@@ -63,7 +63,7 @@ describe SatelicomPtv::XTour do
         latitude: 45.412983, 
         interval: (from..to)
       })
-      response2 = SatelicomPtv::XTour.plan_sequence(points, fake_garage)
+      response2 = RubyPtvApi::XTour.plan_sequence(points, fake_garage)
       expect(response2[:unmanaged].size).to eq(points.size)
     end
   end

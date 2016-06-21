@@ -1,9 +1,9 @@
 module XTourTest
   class << self
     def create_sequencing_transport_depot(plain_point, id = 1)
-      SatelicomPtv::Model::XTour::SequencingTransportDepot.new(
+      RubyPtvApi::Model::XTour::SequencingTransportDepot.new(
         'id' => id,          
-        'transportPoint' => SatelicomPtv::Model::XTour::TransportPoint.new(
+        'transportPoint' => RubyPtvApi::Model::XTour::TransportPoint.new(
           'id' => id,
           'location' => FactoryGirl.create(:point, point: plain_point)
         )
@@ -21,9 +21,9 @@ module XTourTest
     end
 
     def create_transport_depot(plain_point, id = 1)
-      SatelicomPtv::Model::XTour::TransportDepot.new(
+      RubyPtvApi::Model::XTour::TransportDepot.new(
         'id' => id,          
-        'transportPoint' => SatelicomPtv::Model::XTour::TransportPoint.new(
+        'transportPoint' => RubyPtvApi::Model::XTour::TransportPoint.new(
           'id' => id,
           'location' => FactoryGirl.create(:point, point: plain_point)
         )
@@ -41,7 +41,7 @@ module XTourTest
     end
 
     def create_waypoint_desc(plain_point)
-      SatelicomPtv::Model::XRoute::WaypointDesc.new(
+      RubyPtvApi::Model::XRoute::WaypointDesc.new(
         'coords' => [
           FactoryGirl.create(:point, 'point' => plain_point)
         ],

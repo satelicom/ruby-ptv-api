@@ -1,15 +1,15 @@
 require 'spec_helper'
 
-describe SatelicomPtv::Operation::XLocate::FindLocations do
+describe RubyPtvApi::Operation::XLocate::FindLocations do
   let(:location){  create(:location) }
   let(:location2){ create(:location,  coordinate: create(:point, point: create(:plain_point, x: 1341412, y: 5250303 ))) }
   
   it 'call' do
     VCR.use_cassette("find_locations") do
-      function = SatelicomPtv::Operation::XLocate::FindLocations.new([location, location2])
+      function = RubyPtvApi::Operation::XLocate::FindLocations.new([location, location2])
       address_responses = function.call
-      expect(address_responses.first.class).to eq(SatelicomPtv::Model::XLocate::AddressResponse)
-      expect(address_responses.last.class).to eq(SatelicomPtv::Model::XLocate::AddressResponse)
+      expect(address_responses.first.class).to eq(RubyPtvApi::Model::XLocate::AddressResponse)
+      expect(address_responses.last.class).to eq(RubyPtvApi::Model::XLocate::AddressResponse)
       result_list = address_responses.first.resultList
       expect(result_list.first.city).to eq('Padova')
       expect(result_list.last.city).to eq('Padova')

@@ -1,11 +1,11 @@
 FactoryGirl.define do
-  factory :depot, class: "SatelicomPtv::Model::XTour::Depot" do
+  factory :depot, class: "RubyPtvApi::Model::XTour::Depot" do
     skip_create
     id 17
     location { 
-      SatelicomPtv::Model::Point.new(
+      RubyPtvApi::Model::Point.new(
         {
-          'point' => SatelicomPtv::Model::PlainPoint.new(
+          'point' => RubyPtvApi::Model::PlainPoint.new(
             'x' => 12318994, 
             'y' => 45437802
           )

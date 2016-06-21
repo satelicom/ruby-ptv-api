@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :sequencing_vehicle, class: "SatelicomPtv::Model::XTour::SequencingVehicle" do 
+  factory :sequencing_vehicle, class: "RubyPtvApi::Model::XTour::SequencingVehicle" do
     depotIdStart 17
     depotIdEnd 17
     isPreloaded false
