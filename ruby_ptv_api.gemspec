@@ -8,8 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = RubyPtvApi::VERSION
   spec.authors       = ["Leanbit srl"]
   spec.email         = ["info@leanbit.it"]
-
+  spec.licenses      = ['MIT']
   spec.summary       = "Unofficial PVT ruby client"
+  spec.description   = "PTV client, incomplete implementation of x_route, x_locate, x_tour"
   spec.homepage      = "https://github.com/satelicom/ruby-ptv-api"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
@@ -25,15 +26,15 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "faraday", '>= 0.9.2'
-  spec.add_dependency "oj"
-  spec.add_dependency "hashie"
+  spec.add_dependency "faraday", '~> 0.9'
+  spec.add_dependency "oj", '~> 2.16'
+  spec.add_dependency "hashie", '~> 3.4'
   
   spec.add_development_dependency "bundler", "~> 1.11"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
-  spec.add_development_dependency "guard"
-  spec.add_development_dependency "guard-rspec"
-  spec.add_development_dependency "vcr"
-  spec.add_development_dependency "factory_girl"
+  spec.add_development_dependency "guard", "~> 2.13"
+  spec.add_development_dependency "guard-rspec", "~> 4.6"
+  spec.add_development_dependency "vcr", "~> 3.0"
+  spec.add_development_dependency "factory_girl", "~> 4.5"
 end
