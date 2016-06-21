@@ -2,8 +2,8 @@ module RubyPtvApi
   module XTour
     class << self
       def plan_sequence(points, garage)
-        required_keys = [:uuid, :latitude, :longitude]
-        raise "garage has to include the  keys #{required_keys}" unless (required_keys - garage.methods).empty?
+        # required_keys = [:uuid, :latitude, :longitude]
+        # raise "garage has to include the  keys #{required_keys}" unless (required_keys - garage.methods).empty?
 
         dimaId = 1
         id_manager = RubyPtvApi::IdManager.new
@@ -41,7 +41,7 @@ module RubyPtvApi
         ] if garage.interval
 
         points.each do |point|
-          raise "each point has to include the keys #{required_keys}" unless (required_keys - point.methods).empty?
+          #raise "each point has to include the keys #{required_keys}" unless (required_keys - point.methods).empty?
           sequencing_transport_depots << create_sequencing_transport_depot(
             uuid: point.uuid,
             latitude:  RubyPtvApi.cast_coordinate(point.latitude),
