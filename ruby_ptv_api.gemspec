@@ -6,7 +6,7 @@ require 'ruby_ptv_api/version'
 Gem::Specification.new do |spec|
   spec.name          = "ruby_ptv_api"
   spec.version       = RubyPtvApi::VERSION
-  spec.authors       = ["Leanbit srl"]
+  spec.authors       = ["Leanbit srl", "Satelicom srl"]
   spec.email         = ["info@leanbit.it"]
   spec.licenses      = ['MIT']
   spec.summary       = "Unofficial PVT ruby client"
