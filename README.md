@@ -20,14 +20,15 @@ Or install it yourself as:
 
 ## Setup
 
-  Setup configuration parameters
+Setup configuration parameters
 
-  RubyPtvApi.configure do |c|
-    c.x_locate_endpoint = "http://<your PTV server>"
-    c.x_route_endpoint  = "http://<your PTV server>"
-    c.x_tour_endpoint   = "http://<your PTV server>"
-  end
-
+```ruby
+RubyPtvApi.configure do |c|
+  c.x_locate_endpoint = "http://<your PTV server>"
+  c.x_route_endpoint  = "http://<your PTV server>"
+  c.x_tour_endpoint   = "http://<your PTV server>"
+end
+```
 
 ## Usage
 
