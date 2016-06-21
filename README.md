@@ -1,4 +1,4 @@
-# RubyPtvApi
+# RubyPtvApi [![Gem Version](https://badge.fury.io/rb/ruby_ptv_api.svg)](https://badge.fury.io/rb/ruby_ptv_api)
 
 Unofficial PTV API client
 
