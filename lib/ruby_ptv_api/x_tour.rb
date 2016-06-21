@@ -11,8 +11,8 @@ module RubyPtvApi
           'id' => id_manager.add(garage.uuid), 
           'location' => RubyPtvApi::Model::Point.new(
             'point' => RubyPtvApi::Model::PlainPoint.new(
-              'x' => RubyPtvApi.cast_coordinate(garage.longitude),
-              'y' => RubyPtvApi.cast_coordinate(garage.latitude)
+              'x' => RubyPtvApi.convert_coordinate(garage.longitude),
+              'y' => RubyPtvApi.convert_coordinate(garage.latitude)
             )
           )
         ) 
@@ -44,8 +44,8 @@ module RubyPtvApi
           #raise "each point has to include the keys #{required_keys}" unless (required_keys - point.methods).empty?
           sequencing_transport_depots << create_sequencing_transport_depot(
             uuid: point.uuid,
-            latitude:  RubyPtvApi.cast_coordinate(point.latitude),
-            longitude: RubyPtvApi.cast_coordinate(point.longitude),
+            latitude:  RubyPtvApi.convert_coordinate(point.latitude),
+            longitude: RubyPtvApi.convert_coordinate(point.longitude),
             interval:  point.interval,
             id_manager: id_manager
           )

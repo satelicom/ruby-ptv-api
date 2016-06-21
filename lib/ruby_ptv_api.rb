@@ -196,7 +196,7 @@ module RubyPtvApi
   #  
   class WrongParameterFormat < Exception; end
 
-  def self.cast_coordinate(coord)
-    coord.to_i.to_s.size != 7 ? (coord * 100000).to_i : coord
+  def self.convert_coordinate(coord)
+    coord * RubyPtvApi::Model::PlainPoint::GEODECIMAL_COSTANT
   end
 end

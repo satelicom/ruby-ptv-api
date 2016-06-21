@@ -94,4 +94,98 @@ http_interactions:
       string: '{"tour":{"$type":"SequencingTour","startTimeFixed":false},"result":{"unscheduledOrderIds":[3,5,7,9,11]}}'
     http_version: 
   recorded_at: Tue, 21 Jun 2016 10:16:33 GMT
+- request:
+    method: post
+    uri: http://ptv.dev.satelicom.com:50090/xtour/rs/XTour/planSequence
+    body:
+      encoding: UTF-8
+      string: '{"transportOrders":[{"$type":"SequencingTransportDepot","id":3,"transportPoint":{"$type":"TransportPoint","tourSection":0,"servicePeriod":0,"useServicePeriodForRecreation":false,"allowServiceSplit":false,"openingIntervalConstraint":"START_OF_SERVICE","coDriverRequired":false,"id":2,"location":{"$type":"Point","point":{"$type":"PlainPoint","x":1157543.3,"y":4554952.6}}}},{"$type":"SequencingTransportDepot","id":5,"transportPoint":{"$type":"TransportPoint","tourSection":0,"servicePeriod":0,"useServicePeriodForRecreation":false,"allowServiceSplit":false,"openingIntervalConstraint":"START_OF_SERVICE","coDriverRequired":false,"id":4,"location":{"$type":"Point","point":{"$type":"PlainPoint","x":1090213.8,"y":4463696.3}}}},{"$type":"SequencingTransportDepot","id":7,"transportPoint":{"$type":"TransportPoint","tourSection":0,"servicePeriod":0,"useServicePeriodForRecreation":false,"allowServiceSplit":false,"openingIntervalConstraint":"START_OF_SERVICE","coDriverRequired":false,"id":6,"location":{"$type":"Point","point":{"$type":"PlainPoint","x":1099440.0,"y":4543916.9}}}},{"$type":"SequencingTransportDepot","id":9,"transportPoint":{"$type":"TransportPoint","tourSection":0,"servicePeriod":0,"useServicePeriodForRecreation":false,"allowServiceSplit":false,"openingIntervalConstraint":"START_OF_SERVICE","coDriverRequired":false,"id":8,"location":{"$type":"Point","point":{"$type":"PlainPoint","x":1134335.6,"y":4449101.5}}}},{"$type":"SequencingTransportDepot","id":11,"transportPoint":{"$type":"TransportPoint","tourSection":0,"servicePeriod":0,"useServicePeriodForRecreation":false,"allowServiceSplit":false,"openingIntervalConstraint":"START_OF_SERVICE","coDriverRequired":false,"id":10,"location":{"$type":"Point","point":{"$type":"PlainPoint","x":1161949.1,"y":4483733.0}}}}],"depots":[{"$type":"Depot","id":1,"location":{"$type":"Point","point":{"$type":"PlainPoint","x":1191891.0,"y":4541298.3}},"openingIntervals":[{"$type":"Interval","from":3600,"till":36000}]}],"vehicle":{"$type":"SequencingVehicle","dimaId":1,"depotIdStart":1,"depotIdEnd":1,"isPreloaded":true,"ignoreTransportPointServicePeriod":false,"coDriverStatus":"NEVER","toursMustFitIntoSingleOperatingInterval":true,"operatingIntervals":[{"$type":"Interval","from":3600,"till":36000}]},"sequencingParams":{"$type":"SequencingParams","coDriverTransportPointsInSeparateTours":false,"distanceMatrixCalculation":[{"$type":"DistanceMatrixByRoad","dimaId":1,"deleteBeforeUsage":true,"deleteAfterUsage":true}]},"inputPlan":null,"callerContext":{"properties":[{"key":"Profile","value":"car"},{"key":"CoordFormat","value":"PTV_GEODECIMAL"}]}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Content-Type:
+      - application/json; charset=utf-8
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - Apache-Coyote/1.1
+      xserver-host:
+      - fe80:0:0:0:0:5efe:c0a8:6424%net4
+      xserver-ip:
+      - fe80:0:0:0:0:5efe:c0a8:6424%net4, 192.168.100.36, fe80:0:0:0:0:ffff:ffff:fffe%net5
+      xserver-request-id:
+      - c4144b10-5f3c-4e0f-8c4a-d6be848886d7
+      date:
+      - Tue, 21 Jun 2016 15:58:25 GMT
+      content-type:
+      - application/json
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: '{"tour":{"$type":"SequencingTour","startTimeFixed":false,"result":{"$type":"SequencingTourResult","period":18620,"drivingPeriod":18620,"distance":374089,"distanceFromFirstToLastTransportPoint":258963,"maxDistanceBetweenTransportPoints":105202,"servicePeriod":0,"restPeriod":0,"breakPeriod":0,"earliness":0,"waitingPeriod":0,"transportPointCount":5,"startTime":3600,"startTimeLatest":17380,"coDriverRequired":false,"totalCosts":{"$type":"TotalCosts","costsPerKm":0.0,"fixedCosts":0.0,"costsPerHour":0.0,"totalCosts":0.0},"depotUploadingPeriod":0,"depotUnloadingPeriod":0,"depotAvailabilityForDeliveries":0,"tourChanged":true,"remainingPeriods":"22
+        serialization::archive 9 0 2 0 0 1 4 0 4 0 0 0 0 16200 0 0 0 1 0 39600 0 259200
+        0 0 3 2147483647 2147483647 2147483647 0 0 0 0 0 1 0 0 0 259200 0 0 864000
+        0 0 259200 0 0 6 0 0 0 259200 0 0 0 0 0 0 0 0 0 3 0 0 22220 2147483647 0 22220
+        0 0 0 4 0 0 0 0 0 0 0 2 0 0 2 0 0 0 0 0 4 0 0 0 0 4 0 0 0 0 0 6 0 16200 900
+        1800 0 39600 10800 32400 32400 3 32400 36000 2 604800 86400 0 518400 201600
+        162000 324000 345600 0 1800 2700 21600 32400 900 28800 172800 39600 0 0 0
+        0 0 0 0 0 0 0 900 19800 28800 39600 0 25200 86400 43200 0 86400 604800 259200
+        900"},"tourPoints":[{"$type":"SequencingTourPoint","id":1,"type":"DEPOT","result":{"arrivalTime":3600,"startServiceTime":3600,"endServiceTime":3600,"departureTime":3600,"drivingPeriod":0,"waitingPeriod":0,"servicePeriod":0,"breakPeriodOnRoad":0,"breakPeriodAtTourPoint":0,"restPeriodOnRoad":0,"restPeriodAtTourPoint":0,"earliness":0,"delay":0,"startDistance":0,"drivingDistance":0}},{"$type":"SequencingTourPoint","id":2,"type":"TRANSPORT_POINT","result":{"orderId":3,"arrivalTime":5572,"startServiceTime":5572,"endServiceTime":5572,"departureTime":5572,"drivingPeriod":1972,"waitingPeriod":0,"servicePeriod":0,"breakPeriodOnRoad":0,"breakPeriodAtTourPoint":0,"restPeriodOnRoad":0,"restPeriodAtTourPoint":0,"earliness":0,"delay":0,"startDistance":36815,"drivingDistance":36815}},{"$type":"SequencingTourPoint","id":6,"type":"TRANSPORT_POINT","result":{"orderId":7,"arrivalTime":8727,"startServiceTime":8727,"endServiceTime":8727,"departureTime":8727,"drivingPeriod":3155,"waitingPeriod":0,"servicePeriod":0,"breakPeriodOnRoad":0,"breakPeriodAtTourPoint":0,"restPeriodOnRoad":0,"restPeriodAtTourPoint":0,"earliness":0,"delay":0,"startDistance":96467,"drivingDistance":59652}},{"$type":"SequencingTourPoint","id":4,"type":"TRANSPORT_POINT","result":{"orderId":5,"arrivalTime":13236,"startServiceTime":13236,"endServiceTime":13236,"departureTime":13236,"drivingPeriod":4509,"waitingPeriod":0,"servicePeriod":0,"breakPeriodOnRoad":0,"breakPeriodAtTourPoint":0,"restPeriodOnRoad":0,"restPeriodAtTourPoint":0,"earliness":0,"delay":0,"startDistance":201669,"drivingDistance":105202}},{"$type":"SequencingTourPoint","id":8,"type":"TRANSPORT_POINT","result":{"orderId":9,"arrivalTime":16007,"startServiceTime":16007,"endServiceTime":16007,"departureTime":16007,"drivingPeriod":2771,"waitingPeriod":0,"servicePeriod":0,"breakPeriodOnRoad":0,"breakPeriodAtTourPoint":0,"restPeriodOnRoad":0,"restPeriodAtTourPoint":0,"earliness":0,"delay":0,"startDistance":247020,"drivingDistance":45351}},{"$type":"SequencingTourPoint","id":10,"type":"TRANSPORT_POINT","result":{"orderId":11,"arrivalTime":18780,"startServiceTime":18780,"endServiceTime":18780,"departureTime":18780,"drivingPeriod":2773,"waitingPeriod":0,"servicePeriod":0,"breakPeriodOnRoad":0,"breakPeriodAtTourPoint":0,"restPeriodOnRoad":0,"restPeriodAtTourPoint":0,"earliness":0,"delay":0,"startDistance":295778,"drivingDistance":48758}},{"$type":"SequencingTourPoint","id":1,"type":"DEPOT","result":{"arrivalTime":22220,"startServiceTime":22220,"endServiceTime":22220,"departureTime":22220,"drivingPeriod":3440,"waitingPeriod":0,"servicePeriod":0,"breakPeriodOnRoad":0,"breakPeriodAtTourPoint":0,"restPeriodOnRoad":0,"restPeriodAtTourPoint":0,"earliness":0,"delay":0,"startDistance":374089,"drivingDistance":78311}}]},"result":{"remainingPeriods":"22
+        serialization::archive 9 0 2 0 0 1 4 0 4 0 0 0 0 16200 0 0 0 1 0 39600 0 259200
+        0 0 3 2147483647 2147483647 2147483647 0 0 0 0 0 1 0 0 0 259200 0 0 864000
+        0 0 259200 0 0 6 0 0 0 259200 0 0 0 0 0 0 0 0 0 3 0 0 22220 2147483647 0 22220
+        0 0 0 4 0 0 0 0 0 0 0 2 0 0 2 0 0 0 0 0 4 0 0 0 0 4 0 0 0 0 0 6 0 16200 900
+        1800 0 39600 10800 32400 32400 3 32400 36000 2 604800 86400 0 518400 201600
+        162000 324000 345600 0 1800 2700 21600 32400 900 28800 172800 39600 0 0 0
+        0 0 0 0 0 0 0 900 19800 28800 39600 0 25200 86400 43200 0 86400 604800 259200
+        900","tourEvents":[{"logisticPointId":1,"startTime":3600,"period":0,"tourIndex":0,"violations":[],"descriptions":["SERVICE","IS_IN_SERVICE_INTERVAL"]},{"logisticPointId":-1,"startTime":3600,"period":1972,"tourIndex":0,"violations":[],"descriptions":["DRIVING"]},{"logisticPointId":2,"startTime":5572,"period":0,"tourIndex":0,"violations":[],"descriptions":["SERVICE","IS_IN_SERVICE_INTERVAL"]},{"logisticPointId":-1,"startTime":5572,"period":3155,"tourIndex":0,"violations":[],"descriptions":["DRIVING"]},{"logisticPointId":6,"startTime":8727,"period":0,"tourIndex":0,"violations":[],"descriptions":["SERVICE","IS_IN_SERVICE_INTERVAL"]},{"logisticPointId":-1,"startTime":8727,"period":4509,"tourIndex":0,"violations":[],"descriptions":["DRIVING"]},{"logisticPointId":4,"startTime":13236,"period":0,"tourIndex":0,"violations":[],"descriptions":["SERVICE","IS_IN_SERVICE_INTERVAL"]},{"logisticPointId":-1,"startTime":13236,"period":2771,"tourIndex":0,"violations":[],"descriptions":["DRIVING"]},{"logisticPointId":8,"startTime":16007,"period":0,"tourIndex":0,"violations":[],"descriptions":["SERVICE","IS_IN_SERVICE_INTERVAL"]},{"logisticPointId":-1,"startTime":16007,"period":2773,"tourIndex":0,"violations":[],"descriptions":["DRIVING"]},{"logisticPointId":10,"startTime":18780,"period":0,"tourIndex":0,"violations":[],"descriptions":["SERVICE","IS_IN_SERVICE_INTERVAL"]},{"logisticPointId":-1,"startTime":18780,"period":3440,"tourIndex":0,"violations":[],"descriptions":["DRIVING"]},{"logisticPointId":1,"startTime":22220,"period":0,"tourIndex":0,"violations":[],"descriptions":["SERVICE","IS_IN_SERVICE_INTERVAL"]}],"scheduledOrderIds":[3,5,7,9,11]}}'
+    http_version: 
+  recorded_at: Tue, 21 Jun 2016 15:58:25 GMT
+- request:
+    method: post
+    uri: http://ptv.dev.satelicom.com:50090/xtour/rs/XTour/planSequence
+    body:
+      encoding: UTF-8
+      string: '{"transportOrders":[{"$type":"SequencingTransportDepot","id":3,"transportPoint":{"$type":"TransportPoint","tourSection":0,"servicePeriod":0,"useServicePeriodForRecreation":false,"allowServiceSplit":false,"openingIntervalConstraint":"START_OF_SERVICE","coDriverRequired":false,"id":2,"location":{"$type":"Point","point":{"$type":"PlainPoint","x":1157543.3,"y":4554952.6}}}},{"$type":"SequencingTransportDepot","id":5,"transportPoint":{"$type":"TransportPoint","tourSection":0,"servicePeriod":0,"useServicePeriodForRecreation":false,"allowServiceSplit":false,"openingIntervalConstraint":"START_OF_SERVICE","coDriverRequired":false,"id":4,"location":{"$type":"Point","point":{"$type":"PlainPoint","x":1090213.8,"y":4463696.3}}}},{"$type":"SequencingTransportDepot","id":7,"transportPoint":{"$type":"TransportPoint","tourSection":0,"servicePeriod":0,"useServicePeriodForRecreation":false,"allowServiceSplit":false,"openingIntervalConstraint":"START_OF_SERVICE","coDriverRequired":false,"id":6,"location":{"$type":"Point","point":{"$type":"PlainPoint","x":1099440.0,"y":4543916.9}}}},{"$type":"SequencingTransportDepot","id":9,"transportPoint":{"$type":"TransportPoint","tourSection":0,"servicePeriod":0,"useServicePeriodForRecreation":false,"allowServiceSplit":false,"openingIntervalConstraint":"START_OF_SERVICE","coDriverRequired":false,"id":8,"location":{"$type":"Point","point":{"$type":"PlainPoint","x":1134335.6,"y":4449101.5}}}},{"$type":"SequencingTransportDepot","id":11,"transportPoint":{"$type":"TransportPoint","tourSection":0,"servicePeriod":0,"useServicePeriodForRecreation":false,"allowServiceSplit":false,"openingIntervalConstraint":"START_OF_SERVICE","coDriverRequired":false,"id":10,"location":{"$type":"Point","point":{"$type":"PlainPoint","x":1161949.1,"y":4483733.0}}}}],"depots":[{"$type":"Depot","id":1,"location":{"$type":"Point","point":{"$type":"PlainPoint","x":4591891.0,"y":4541298.3}},"openingIntervals":[{"$type":"Interval","from":3600,"till":36000}]}],"vehicle":{"$type":"SequencingVehicle","dimaId":1,"depotIdStart":1,"depotIdEnd":1,"isPreloaded":true,"ignoreTransportPointServicePeriod":false,"coDriverStatus":"NEVER","toursMustFitIntoSingleOperatingInterval":true,"operatingIntervals":[{"$type":"Interval","from":3600,"till":36000}]},"sequencingParams":{"$type":"SequencingParams","coDriverTransportPointsInSeparateTours":false,"distanceMatrixCalculation":[{"$type":"DistanceMatrixByRoad","dimaId":1,"deleteBeforeUsage":true,"deleteAfterUsage":true}]},"inputPlan":null,"callerContext":{"properties":[{"key":"Profile","value":"car"},{"key":"CoordFormat","value":"PTV_GEODECIMAL"}]}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Content-Type:
+      - application/json; charset=utf-8
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - Apache-Coyote/1.1
+      xserver-host:
+      - fe80:0:0:0:0:5efe:c0a8:6424%net4
+      xserver-ip:
+      - fe80:0:0:0:0:5efe:c0a8:6424%net4, 192.168.100.36, fe80:0:0:0:0:ffff:ffff:fffe%net5
+      xserver-request-id:
+      - f6a9d2cc-f584-4ce6-b67e-c385b492ebd5
+      date:
+      - Tue, 21 Jun 2016 15:58:28 GMT
+      content-type:
+      - application/json
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: '{"tour":{"$type":"SequencingTour","startTimeFixed":false},"result":{"unscheduledOrderIds":[3,5,7,9,11]}}'
+    http_version: 
+  recorded_at: Tue, 21 Jun 2016 15:58:28 GMT
 recorded_with: VCR 3.0.1
