@@ -1,4 +1,4 @@
-# SatelicomPtv
+# RubyPtvApi
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/ruby_ptv_api`. To experiment with that code, run `bin/console` for an interactive prompt.
 
@@ -24,7 +24,7 @@ Or install it yourself as:
 
   Setup configuration parameters
 
-  SatelicomPtv.configure do |c|
+  RubyPtvApi.configure do |c|
     c.x_locate_endpoint = "http://<your PTV server>"
     c.x_route_endpoint  = "http://<your PTV server>"
     c.x_tour_endpoint   = "http://<your PTV server>"

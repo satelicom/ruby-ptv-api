@@ -1,7 +1,7 @@
-module SatelicomPtv
+module RubyPtvApi
   module Model 
     module XTour
-      class RegulationsBase < SatelicomPtv::Model::Base
+      class RegulationsBase < RubyPtvApi::Model::Base
         property 'id'
       end
     end

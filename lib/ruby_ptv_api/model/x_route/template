@@ -1,13 +1,13 @@
-module SatelicomPtv
+module RubyPtvApi
   module Model
     module XRoute
-      class None < SatelicomPtv::Model::Base
+      class None < RubyPtvApi::Model::Base
         property 'none'
         property 'none'
         property 'none'
         
         transform_with: ->(value) do 
-          SatelicomPtv::Constant.validate(SatelicomPtv::Constant::CEN_VERSION, value)
+          RubyPtvApi::Constant.validate(RubyPtvApi::Constant::CEN_VERSION, value)
         end
         coerce_key :none,  None
       end
