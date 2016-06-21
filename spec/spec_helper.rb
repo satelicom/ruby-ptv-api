@@ -1,5 +1,5 @@
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
-require 'satelicom_ptv'
+require 'ruby_ptv_api'
 require 'vcr'
 require 'factory_girl'
 Dir[File.dirname(__FILE__) + "/support/**/*.rb"].each {|f| require f }

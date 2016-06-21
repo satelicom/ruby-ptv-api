@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://ptv.dev.satelicom.com:50020/xlocate/rs/XLocate/findCombinedTransportByLocation
+    body:
+      encoding: UTF-8
+      string: '{"location":{"$type":"Location","coordinate":{"$type":"Point","point":{"$type":"PlainPoint","x":1192353,"y":4541272}}},"options":[],"additionalFields":[],"callerContext":{"properties":[{"key":"Profile","value":"car"},{"key":"CoordFormat","value":"PTV_GEODECIMAL"}]}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Content-Type:
+      - application/json; charset=utf-8
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - Apache-Coyote/1.1
+      xserver-host:
+      - fe80:0:0:0:0:5efe:c0a8:6424%net4
+      xserver-ip:
+      - fe80:0:0:0:0:5efe:c0a8:6424%net4, 192.168.100.36, 2001:0:5ef5:79fb:1041:31b6:3f57:9bdb,
+        fe80:0:0:0:1041:31b6:3f57:9bdb%net5
+      xserver-request-id:
+      - 00f39df8-d09d-475e-94fe-db8bf5fee24f
+      date:
+      - Tue, 21 Jun 2016 10:16:25 GMT
+      content-type:
+      - application/json
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: '{"errorCode":0,"errorDescription":"","resultList":[{"id":"VjEoMzk7MTE0NjgzNTQ5OTsyMDQ7MTI3OzApKDMwOzEyMDMzOTIxOTA7MTI5Ozg7MClWZW5lemlhIFRlcm1pbmFsIEZ1c2luYS1QYXRyYXNzbw==","name":"Venezia
+        Terminal Fusina-Patrasso","duration":157200,"distance":26188.17172283348,"type":1,"start":{"coordinate":{"$type":"Point","point":{"$type":"PlainPoint","x":1225857.3291,"y":4542543.8561}},"country":"I","name":"Venezia
+        Terminal Fusina"},"destination":{"coordinate":{"$type":"Point","point":{"$type":"PlainPoint","x":2173653.0251,"y":3825570.2676}},"country":"GR","name":"Patra"},"combinedTransportFields":[]},{"id":"VjEoMzk7MTE0NjgzNTQ5OTsyMTE7OTU7MCkoMzA7MTE5NDU0NDk3MzsyMDc7MjQ3OzApVmVuZXppYS1JZ291bWVuaXRzYQ==","name":"Venezia-Igoumenitsa","duration":139920,"distance":26206.387384982278,"type":1,"start":{"coordinate":{"$type":"Point","point":{"$type":"PlainPoint","x":1225887.6064,"y":4542446.7137}},"country":"I","name":"Venezia"},"destination":{"coordinate":{"$type":"Point","point":{"$type":"PlainPoint","x":2025674.9743,"y":3948684.5956}},"country":"GR","name":"Igoumenitsa"},"combinedTransportFields":[]},{"id":"VjEoMzk7MTE0NzA5NzY0NTsyNDA7NDU7MCkoOTA7MTI0MjQ1MTQ4NDsyMTsxMzA7MClMaW5lYSBkaSB0cmFnaGV0dGk=","name":"Linea
+        di traghetti","duration":306300,"distance":29834.630431035235,"type":1,"start":{"coordinate":{"$type":"Point","point":{"$type":"PlainPoint","x":1230407.572,"y":4543836.9047}},"country":"I","name":"Venezia"},"destination":{"coordinate":{"$type":"Point","point":{"$type":"PlainPoint","x":2827971.0312,"y":3684895.4954}},"country":"TR","name":"Marmaris"},"combinedTransportFields":[]},{"id":"VjEoMzk7MTE0NzA5NzY0NTsyNDA7NDU7MCkoOTA7MTIzNTcwMTQ2MDs0NTs1NDswKUxpbmVhIGRpIHRyYWdoZXR0aQ==","name":"Linea
+        di traghetti","duration":141600,"distance":29834.630431035235,"type":1,"start":{"coordinate":{"$type":"Point","point":{"$type":"PlainPoint","x":1230407.572,"y":4543836.9047}},"country":"I","name":"Venezia"},"destination":{"coordinate":{"$type":"Point","point":{"$type":"PlainPoint","x":2714915.6619,"y":3844680.855}},"country":"TR","name":"Izmir"},"combinedTransportFields":[]},{"id":"VjEoMzk7MTE0NzA5NzY0NTsyNDA7NDU7MCkoMzk7MTE0NzU1NjM5NTsxODE7MTM5OzApVmVuZXppYS1MaWRvIGRpIFZlbmV6aWE=","name":"Venezia-Lido
+        di Venezia","duration":2221,"distance":29834.630431035235,"type":1,"start":{"coordinate":{"$type":"Point","point":{"$type":"PlainPoint","x":1230407.572,"y":4543836.9047}},"country":"I","name":"Venezia"},"destination":{"coordinate":{"$type":"Point","point":{"$type":"PlainPoint","x":1237842.8073,"y":4542580.284}},"country":"I","name":"Venezia"},"combinedTransportFields":[]},{"id":"VjEoMzk7MTE0NzE2MzE2ODs5NjsxNTQ7MCkoMzk7MTE0NzIyODcwMzszNDsxMzE7MClTYW50YSBNYXJpYSBkZWwgTWFyZS1BbGJlcm9uaSBT","name":"Santa
+        Maria del Mare-Alberoni S","duration":1440,"distance":31123.058898324918,"type":1,"start":{"coordinate":{"$type":"Point","point":{"$type":"PlainPoint","x":1230883.3578,"y":4534137.8992}},"country":"I","name":"Venezia"},"destination":{"coordinate":{"$type":"Point","point":{"$type":"PlainPoint","x":1231713.8204,"y":4533295.7039}},"country":"I","name":"Venezia"},"combinedTransportFields":[]},{"id":"VjEoMzk7MTE0NzIyODcxNTsyMTk7Njg7MCkoMzk7MTE0NzI5NDI0OTsxOTM7MjAyOzApR2l1ZGVjY2EtU2FuIENsZW1lbnRlIFM=","name":"Giudecca-San
+        Clemente S","duration":1440,"distance":31369.4980629326,"type":1,"start":{"coordinate":{"$type":"Point","point":{"$type":"PlainPoint","x":1232514.0057,"y":4542364.7485}},"country":"I","name":"Venezia"},"destination":{"coordinate":{"$type":"Point","point":{"$type":"PlainPoint","x":1233500.18,"y":4541229.2566}},"country":"I","name":"Venezia"},"combinedTransportFields":[]},{"id":"VjEoMzk7MTE0NzIyODcxNTsyNDc7MTYwOzApKDM5OzExNDcyOTQyNTE7MTsyNTE7MClWZW5lemlhLUdpdWRlY2Nh","name":"Venezia-Giudecca","duration":1203,"distance":31476.699687138567,"type":1,"start":{"coordinate":{"$type":"Point","point":{"$type":"PlainPoint","x":1232635.1148,"y":4542644.0324}},"country":"I","name":"Venezia"},"destination":{"coordinate":{"$type":"Point","point":{"$type":"PlainPoint","x":1232669.7174,"y":4542920.267}},"country":"I","name":"Venezia"},"combinedTransportFields":[]},{"id":"VjEoMzk7MTE0NzIyODcxNTsyNDc7MTYwOzApKDM5OzExNDczNTk3ODg7MTExOzE1OzApR2l1ZGVjY2EtSXNvbGEgZGkgU2FuIEdpb3JnaW8gTw==","name":"Giudecca-Isola
+        di San Giorgio O","duration":1380,"distance":31476.699687138567,"type":1,"start":{"coordinate":{"$type":"Point","point":{"$type":"PlainPoint","x":1232635.1148,"y":4542644.0324}},"country":"I","name":"Venezia"},"destination":{"coordinate":{"$type":"Point","point":{"$type":"PlainPoint","x":1234244.1361,"y":4542974.9052}},"country":"I","name":"Venezia"},"combinedTransportFields":[]},{"id":"VjEoMzk7MTE0NzI5NDI1MTsxOzI1MTswKSgzOTsxMTQ3MjI4NzE1OzI0NzsxNjA7MClWZW5lemlhLUdpdWRlY2Nh","name":"Venezia-Giudecca","duration":1203,"distance":31519.274292053935,"type":1,"start":{"coordinate":{"$type":"Point","point":{"$type":"PlainPoint","x":1232669.7174,"y":4542920.267}},"country":"I","name":"Venezia"},"destination":{"coordinate":{"$type":"Point","point":{"$type":"PlainPoint","x":1232635.1148,"y":4542644.0324}},"country":"I","name":"Venezia"},"combinedTransportFields":[]},{"id":"VjEoMzk7MTE0NzIyODcwMzszNDsxMzE7MCkoMzk7MTE0NzE2MzE2ODs5NjsxNTQ7MClTYW50YSBNYXJpYSBkZWwgTWFyZS1BbGJlcm9uaSBO","name":"Santa
+        Maria del Mare-Alberoni N","duration":1440,"distance":31999.74326080838,"type":1,"start":{"coordinate":{"$type":"Point","point":{"$type":"PlainPoint","x":1231713.8204,"y":4533295.7039}},"country":"I","name":"Venezia"},"destination":{"coordinate":{"$type":"Point","point":{"$type":"PlainPoint","x":1230883.3578,"y":4534137.8992}},"country":"I","name":"Venezia"},"combinedTransportFields":[]},{"id":"VjEoMzk7MTE0NzI5NDI0OTsxOTM7MjAyOzApKDM5OzExNDcyMjg3MTU7MjE5OzY4OzApR2l1ZGVjY2EtU2FuIENsZW1lbnRlIE4=","name":"Giudecca-San
+        Clemente N","duration":1440,"distance":32118.936988734375,"type":1,"start":{"coordinate":{"$type":"Point","point":{"$type":"PlainPoint","x":1233500.18,"y":4541229.2566}},"country":"I","name":"Venezia"},"destination":{"coordinate":{"$type":"Point","point":{"$type":"PlainPoint","x":1232514.0057,"y":4542364.7485}},"country":"I","name":"Venezia"},"combinedTransportFields":[]},{"id":"VjEoMzk7MTE0NzM1OTc4OTszMjsyMzE7MCkoMzk7MTE0NzM1OTc5MDsxOTU7MTI5OzApVmVuZXppYS1TYW4gTWljaGVsZQ==","name":"Venezia-San
+        Michele","duration":1320,"distance":32609.972365011537,"type":1,"start":{"coordinate":{"$type":"Point","point":{"$type":"PlainPoint","x":1233902.4353,"y":4544401.3823}},"country":"I","name":"Venezia"},"destination":{"coordinate":{"$type":"Point","point":{"$type":"PlainPoint","x":1234607.4635,"y":4544862.6339}},"country":"I","name":"Venezia"},"combinedTransportFields":[]},{"id":"VjEoMzk7MTE0NzM1OTc4OTszMjsyMzE7MCkoMzk7MTE0NzQyNTMyNzsxMzI7ODswKVZlbmV6aWEtTXVyYW5v","name":"Venezia-Murano","duration":1440,"distance":32609.972365011537,"type":1,"start":{"coordinate":{"$type":"Point","point":{"$type":"PlainPoint","x":1233902.4353,"y":4544401.3823}},"country":"I","name":"Venezia"},"destination":{"coordinate":{"$type":"Point","point":{"$type":"PlainPoint","x":1235433.6007,"y":4545266.1982}},"country":"I","name":"Venezia"},"combinedTransportFields":[]},{"id":"VjEoMzk7MTE0NzM1OTc4OTszMjsyMzE7MCkoMzk7MTE0NzU1NjM5NzsxMzI7MjIxOzApVmVuZXppYS1WaWdub2xl","name":"Venezia-Vignole","duration":1680,"distance":32609.972365011537,"type":1,"start":{"coordinate":{"$type":"Point","point":{"$type":"PlainPoint","x":1233902.4353,"y":4544401.3823}},"country":"I","name":"Venezia"},"destination":{"coordinate":{"$type":"Point","point":{"$type":"PlainPoint","x":1237630.8663,"y":4544371.0355}},"country":"I","name":"Venezia"},"combinedTransportFields":[]},{"id":"VjEoMzk7MTE0NzM1OTc4ODsxMTE7MTU7MCkoMzk7MTE0NzIyODcxNTsyNDc7MTYwOzApR2l1ZGVjY2EtSXNvbGEgZGkgU2FuIEdpb3JnaW8gVw==","name":"Giudecca-Isola
+        di San Giorgio W","duration":1380,"distance":32749.35647306633,"type":1,"start":{"coordinate":{"$type":"Point","point":{"$type":"PlainPoint","x":1234244.1361,"y":4542974.9052}},"country":"I","name":"Venezia"},"destination":{"coordinate":{"$type":"Point","point":{"$type":"PlainPoint","x":1232635.1148,"y":4542644.0324}},"country":"I","name":"Venezia"},"combinedTransportFields":[]},{"id":"VjEoMzk7MTE0NzM1OTc4ODsxNTQ7MTQ4OzApKDM5OzExNDc0MjUzMjI7MTU2OzE5NDswKVZlbmV6aWEtU2FuIFNlcnZvbG8=","name":"Venezia-San
+        Servolo","duration":1440,"distance":32921.99189620048,"type":1,"start":{"coordinate":{"$type":"Point","point":{"$type":"PlainPoint","x":1234430.1251,"y":4543378.6045}},"country":"I","name":"Venezia"},"destination":{"coordinate":{"$type":"Point","point":{"$type":"PlainPoint","x":1235537.4085,"y":4541976.1567}},"country":"I","name":"Venezia"},"combinedTransportFields":[]},{"id":"VjEoMzk7MTE0NzM1OTc5MDsxOTU7MTI5OzApKDM5OzExNDczNTk3ODk7MzI7MjMxOzApVmVuZXppYS1TYW4gTWljaGVsZQ==","name":"Venezia-San
+        Michele","duration":1320,"distance":33213.46778216031,"type":1,"start":{"coordinate":{"$type":"Point","point":{"$type":"PlainPoint","x":1234607.4635,"y":4544862.6339}},"country":"I","name":"Venezia"},"destination":{"coordinate":{"$type":"Point","point":{"$type":"PlainPoint","x":1233902.4353,"y":4544401.3823}},"country":"I","name":"Venezia"},"combinedTransportFields":[]},{"id":"VjEoMzk7MTE0NzQyNTMyMjsxNTY7MTk0OzApKDM5OzExNDczNTk3ODg7MTU0OzE0ODswKVZlbmV6aWEtU2FuIFNlcnZvbG8=","name":"Venezia-San
+        Servolo","duration":1440,"distance":33715.99707411113,"type":1,"start":{"coordinate":{"$type":"Point","point":{"$type":"PlainPoint","x":1235537.4085,"y":4541976.1567}},"country":"I","name":"Venezia"},"destination":{"coordinate":{"$type":"Point","point":{"$type":"PlainPoint","x":1234430.1251,"y":4543378.6045}},"country":"I","name":"Venezia"},"combinedTransportFields":[]},{"id":"VjEoMzk7MTE0NzQyNTMyMjsxNTY7MTk0OzApKDM5OzExNDc0OTA4NTc7OTsxOTc7MClTLiBTZXJ2b2xvLVNhbiBMYXp6YXJvIFM=","name":"S.
+        Servolo-San Lazzaro S","duration":1320,"distance":33715.99707411113,"type":1,"start":{"coordinate":{"$type":"Point","point":{"$type":"PlainPoint","x":1235537.4085,"y":4541976.1567}},"country":"I","name":"Venezia"},"destination":{"coordinate":{"$type":"Point","point":{"$type":"PlainPoint","x":1236000.2184,"y":4541214.0747}},"country":"I","name":"Venezia"},"combinedTransportFields":[]}]}'
+    http_version: 
+  recorded_at: Tue, 21 Jun 2016 10:16:24 GMT
+recorded_with: VCR 3.0.1

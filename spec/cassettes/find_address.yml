@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://ptv.dev.satelicom.com:50020/xlocate/rs/XLocate/findAddress
+    body:
+      encoding: UTF-8
+      string: '{"addr":{"$type":"Address","country":"I","postCode":"","city":"Padova","city2":"","street":"Via
+        prima strada 11","houseNumber":""},"options":[],"sorting":[],"additionalFields":[],"callerContext":{"properties":[{"key":"Profile","value":"car"},{"key":"CoordFormat","value":"PTV_GEODECIMAL"}]}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Content-Type:
+      - application/json; charset=utf-8
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - Apache-Coyote/1.1
+      xserver-host:
+      - fe80:0:0:0:0:5efe:c0a8:6424%net4
+      xserver-ip:
+      - fe80:0:0:0:0:5efe:c0a8:6424%net4, 192.168.100.36, 2001:0:5ef5:79fb:1041:31b6:3f57:9bdb,
+        fe80:0:0:0:1041:31b6:3f57:9bdb%net5
+      xserver-request-id:
+      - 8a662d31-1f8c-4960-ba31-0f05c9926d0f
+      date:
+      - Tue, 21 Jun 2016 10:16:24 GMT
+      content-type:
+      - application/json
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: '{"errorCode":0,"errorDescription":"","resultList":[{"$type":"ResultAddress","country":"I","state":"Veneto","postCode":"35129","city":"Padova","city2":"","street":"Prima
+        Strada","houseNumber":"11","adminRegion":"Padova","appendix":"","countryCapital":"Roma","totalScore":81,"detailLevelDescription":"HNRINTERPOLATED","classificationDescription":"HIGH","coordinates":{"$type":"Point","point":{"$type":"PlainPoint","x":1191792.0,"y":4541288.0}},"additionalFields":[]}]}'
+    http_version: 
+  recorded_at: Tue, 21 Jun 2016 10:16:22 GMT
+recorded_with: VCR 3.0.1

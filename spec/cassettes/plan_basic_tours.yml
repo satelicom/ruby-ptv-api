@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://ptv.dev.satelicom.com:50090/xtour/rs/XTour/planBasicTours
+    body:
+      encoding: UTF-8
+      string: '{"transportOrders":[{"$type":"TransportDepot","id":1,"transportPoint":{"$type":"TransportPoint","tourSection":0,"servicePeriod":0,"useServicePeriodForRecreation":false,"allowServiceSplit":false,"openingIntervalConstraint":"START_OF_SERVICE","coDriverRequired":false,"id":1,"location":{"$type":"Point","point":{"$type":"PlainPoint","x":1191893,"y":4541299}}}},{"$type":"TransportDepot","id":2,"transportPoint":{"$type":"TransportPoint","tourSection":0,"servicePeriod":0,"useServicePeriodForRecreation":false,"allowServiceSplit":false,"openingIntervalConstraint":"START_OF_SERVICE","coDriverRequired":false,"id":2,"location":{"$type":"Point","point":{"$type":"PlainPoint","x":1157538,"y":4554948}}}}],"depots":[{"$type":"Depot","id":1,"location":{"$type":"Point","point":{"$type":"PlainPoint","x":1192353,"y":4541272}}}],"fleet":{"$type":"Fleet","vehicles":[{"$type":"Vehicle","id":2,"dimaId":1,"depotIdStart":1,"depotIdEnd":1}]},"planningParams":{"$type":"StandardParams","coDriverTransportPointsInSeparateTours":false,"distanceMatrixCalculation":[{"$type":"DistanceMatrixByRoad","dimaId":1,"deleteBeforeUsage":true,"deleteAfterUsage":true}]},"inputPlan":null,"callerContext":{"properties":[{"key":"Profile","value":"car"},{"key":"CoordFormat","value":"PTV_GEODECIMAL"}]}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Content-Type:
+      - application/json; charset=utf-8
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - Apache-Coyote/1.1
+      xserver-host:
+      - fe80:0:0:0:0:5efe:c0a8:6424%net4
+      xserver-ip:
+      - fe80:0:0:0:0:5efe:c0a8:6424%net4, 192.168.100.36, fe80:0:0:0:0:ffff:ffff:fffe%net5
+      xserver-request-id:
+      - 2cb9bafa-f3c1-478f-a204-fbf29b87e2e4
+      date:
+      - Tue, 21 Jun 2016 10:16:28 GMT
+      content-type:
+      - application/json
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: '{"result":{"totalTourCount":1,"totalTourPeriod":3996,"totalTourDrivingPeriod":3996,"totalTourDistance":73767,"totalTourCosts":0.0,"totalChainCosts":0.0,"scheduledVehicleIds":[2],"scheduledOrderIds":[1,2]},"chains":[{"vehicleId":2,"result":{"chainCosts":0.0,"remainingPeriods":"22
+        serialization::archive 9 0 2 0 0 1 4 0 4 0 0 0 0 16200 0 0 0 1 0 39600 0 259200
+        0 0 3 2147483647 2147483647 2147483647 0 0 0 0 0 1 0 0 0 259200 0 0 864000
+        0 0 259200 0 0 6 0 0 0 259200 0 0 0 0 0 0 0 0 0 3 0 0 3996 2147483647 0 3996
+        0 0 0 4 0 0 0 0 0 0 0 2 0 0 2 0 0 0 0 0 4 0 0 0 0 4 0 0 0 0 0 6 0 16200 900
+        1800 0 39600 10800 32400 32400 3 32400 36000 2 604800 86400 0 518400 201600
+        162000 324000 345600 0 1800 2700 21600 32400 900 28800 172800 39600 0 0 0
+        0 0 0 0 0 0 0 900 19800 28800 39600 0 25200 86400 43200 0 86400 604800 259200
+        900","drivingPeriod":3996,"endTime":3996,"periodFromStartLocation":0,"distanceFromStartLocation":0,"periodToEndLocation":0,"distanceToEndLocation":0,"tourEvents":[{"logisticPointId":1,"startTime":0,"period":0,"tourIndex":0,"violations":[],"descriptions":["SERVICE","IS_IN_SERVICE_INTERVAL"]},{"logisticPointId":-1,"startTime":0,"period":56,"tourIndex":0,"violations":[],"descriptions":["DRIVING"]},{"logisticPointId":1,"startTime":56,"period":0,"tourIndex":0,"violations":[],"descriptions":["SERVICE","IS_IN_SERVICE_INTERVAL"]},{"logisticPointId":-1,"startTime":56,"period":1972,"tourIndex":0,"violations":[],"descriptions":["DRIVING"]},{"logisticPointId":2,"startTime":2028,"period":0,"tourIndex":0,"violations":[],"descriptions":["SERVICE","IS_IN_SERVICE_INTERVAL"]},{"logisticPointId":-1,"startTime":2028,"period":1968,"tourIndex":0,"violations":[],"descriptions":["DRIVING"]},{"logisticPointId":1,"startTime":3996,"period":0,"tourIndex":0,"violations":[],"descriptions":["SERVICE","IS_IN_SERVICE_INTERVAL"]}]},"tours":[{"$type":"Tour","startTimeFixed":false,"id":1,"tourPointFixation":"NONE","vehicleFixed":false,"ignoreIntermediatePeriodOfPreviousTour":false,"result":{"$type":"TourResult","period":3996,"drivingPeriod":3996,"distance":73767,"distanceFromFirstToLastTransportPoint":36814,"maxDistanceBetweenTransportPoints":36814,"servicePeriod":0,"restPeriod":0,"breakPeriod":0,"earliness":0,"waitingPeriod":0,"transportPointCount":2,"startTime":0,"startTimeLatest":2147483647,"coDriverRequired":false,"totalCosts":{"$type":"TotalCosts","costsPerKm":0.0,"fixedCosts":0.0,"costsPerHour":0.0,"totalCosts":0.0},"depotUploadingPeriod":0,"depotUnloadingPeriod":0,"depotAvailabilityForDeliveries":0,"tourChanged":true,"remainingPeriods":"22
+        serialization::archive 9 0 2 0 0 1 4 0 4 0 0 0 0 16200 0 0 0 1 0 39600 0 259200
+        0 0 3 2147483647 2147483647 2147483647 0 0 0 0 0 1 0 0 0 259200 0 0 864000
+        0 0 259200 0 0 6 0 0 0 259200 0 0 0 0 0 0 0 0 0 3 0 0 3996 2147483647 0 3996
+        0 0 0 4 0 0 0 0 0 0 0 2 0 0 2 0 0 0 0 0 4 0 0 0 0 4 0 0 0 0 0 6 0 16200 900
+        1800 0 39600 10800 32400 32400 3 32400 36000 2 604800 86400 0 518400 201600
+        162000 324000 345600 0 1800 2700 21600 32400 900 28800 172800 39600 0 0 0
+        0 0 0 0 0 0 0 900 19800 28800 39600 0 25200 86400 43200 0 86400 604800 259200
+        900"},"tourPoints":[{"$type":"TourPoint","id":1,"type":"DEPOT","result":{"arrivalTime":0,"startServiceTime":0,"endServiceTime":0,"departureTime":0,"drivingPeriod":0,"waitingPeriod":0,"servicePeriod":0,"breakPeriodOnRoad":0,"breakPeriodAtTourPoint":0,"restPeriodOnRoad":0,"restPeriodAtTourPoint":0,"earliness":0,"delay":0,"startDistance":0,"drivingDistance":0},"tourFixed":false,"remainPlanned":false},{"$type":"TourPoint","id":1,"type":"TRANSPORT_POINT","result":{"orderId":1,"arrivalTime":56,"startServiceTime":56,"endServiceTime":56,"departureTime":56,"drivingPeriod":56,"waitingPeriod":0,"servicePeriod":0,"breakPeriodOnRoad":0,"breakPeriodAtTourPoint":0,"restPeriodOnRoad":0,"restPeriodAtTourPoint":0,"earliness":0,"delay":0,"startDistance":385,"drivingDistance":385},"tourFixed":false,"remainPlanned":false},{"$type":"TourPoint","id":2,"type":"TRANSPORT_POINT","result":{"orderId":2,"arrivalTime":2028,"startServiceTime":2028,"endServiceTime":2028,"departureTime":2028,"drivingPeriod":1972,"waitingPeriod":0,"servicePeriod":0,"breakPeriodOnRoad":0,"breakPeriodAtTourPoint":0,"restPeriodOnRoad":0,"restPeriodAtTourPoint":0,"earliness":0,"delay":0,"startDistance":37199,"drivingDistance":36814},"tourFixed":false,"remainPlanned":false},{"$type":"TourPoint","id":1,"type":"DEPOT","result":{"arrivalTime":3996,"startServiceTime":3996,"endServiceTime":3996,"departureTime":3996,"drivingPeriod":1968,"waitingPeriod":0,"servicePeriod":0,"breakPeriodOnRoad":0,"breakPeriodAtTourPoint":0,"restPeriodOnRoad":0,"restPeriodAtTourPoint":0,"earliness":0,"delay":0,"startDistance":73767,"drivingDistance":36568},"tourFixed":false,"remainPlanned":false}]}]}]}'
+    http_version: 
+  recorded_at: Tue, 21 Jun 2016 10:16:27 GMT
+recorded_with: VCR 3.0.1

@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://ptv.dev.satelicom.com:50020/xlocate/rs/XLocate/findLocation
+    body:
+      encoding: UTF-8
+      string: '{"location":{"$type":"Location","coordinate":{"$type":"Point","point":{"$type":"PlainPoint","x":1192353,"y":4541272}}},"options":[],"sorting":[],"additionalFields":[],"callerContext":{"properties":[{"key":"Profile","value":"car"},{"key":"CoordFormat","value":"PTV_GEODECIMAL"}]}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Content-Type:
+      - application/json; charset=utf-8
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - Apache-Coyote/1.1
+      xserver-host:
+      - fe80:0:0:0:0:5efe:c0a8:6424%net4
+      xserver-ip:
+      - fe80:0:0:0:0:5efe:c0a8:6424%net4, 192.168.100.36, 2001:0:5ef5:79fb:1041:31b6:3f57:9bdb,
+        fe80:0:0:0:1041:31b6:3f57:9bdb%net5
+      xserver-request-id:
+      - 7d373011-b44f-4bda-934d-b5c770fe8117
+      date:
+      - Tue, 21 Jun 2016 10:16:25 GMT
+      content-type:
+      - application/json
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: '{"errorCode":0,"errorDescription":"","resultList":[{"$type":"ResultAddress","country":"I","state":"Veneto","postCode":"35129","city":"Padova","city2":"","street":"Prima
+        Strada","houseNumber":"42","adminRegion":"Padova","appendix":"","countryCapital":"","totalScore":0,"detailLevelDescription":"HNREXACT","classificationDescription":"UNIQUE","coordinates":{"$type":"Point","point":{"$type":"PlainPoint","x":1192349.0291,"y":4541271.7657}},"additionalFields":[]}]}'
+    http_version: 
+  recorded_at: Tue, 21 Jun 2016 10:16:24 GMT
+recorded_with: VCR 3.0.1
