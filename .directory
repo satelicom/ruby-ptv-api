@@ -2,7 +2,10 @@
 GroupedSorting=true
 PreviewsShown=true
 SortRole=type
-Timestamp=2016,6,21,11,47,47
+Timestamp=2016,6,21,12,21,25
 Version=3
 ViewMode=2
 VisibleRoles=Compact_text,Compact_size,Compact_date
+
+[Settings]
+HiddenFilesShown=true
