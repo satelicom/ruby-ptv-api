@@ -62,7 +62,8 @@ module RubyPtvApi
         {
           sequence: sequence.map{|e| hash[e]}.compact,
           unmanaged: unmanaged_list.map{|e| hash[e]},
-          raw_response: response
+          raw_response: response, 
+          function: function
         }
       end
 
